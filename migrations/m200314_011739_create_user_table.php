@@ -12,6 +12,10 @@ class m200314_011739_create_user_table extends Migration
      */
     public function safeUp()
     {
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB';
+        }
         $this->createTable('{{%user}}', [
             'id' => $this->primaryKey(),
             'created_at' => $this->integer()->notNull(),
