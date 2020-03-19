@@ -23,9 +23,11 @@ class m200314_011739_create_user_table extends Migration
             'username' => $this->string()->notNull(),
             'auth_key' => $this->string(32),
             'password_hash' => $this->string()->notNull(),
+            'email_confirm_token' => $this->string(),
             'password_reset_token' => $this->string(),
             'email' => $this->string()->notNull(),
             'role' => $this->smallInteger()->notNull()->defaultValue(1),
+            'status' => $this->smallInteger()->notNull()->defaultValue(0),
         ], $tableOptions);
 
         $this->createIndex('idx-user-username', '{{%user}}', 'username');
