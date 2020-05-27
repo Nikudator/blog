@@ -27,10 +27,10 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-//        'user' => [
-//            'identityClass' => 'app\modules\user\models\User',
-//            'enableAutoLogin' => true,
-//        ],
+        'user' => [
+            'identityClass' => 'app\modules\user\models\User',
+            'enableAutoLogin' => true,
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
