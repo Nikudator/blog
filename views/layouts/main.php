@@ -43,11 +43,19 @@ AppAsset::register($this);
             Yii::$app->user->isGuest ?
                 ['label' => 'Sign Up', 'url' => ['/user/default/signup']] :
                 false,
-            Yii::$app->user->isGuest ?
-                ['label' => 'Login', 'url' => ['/user/default/login']] :
-                ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/user/default/logout'],
-                    'linkOptions' => ['data-method' => 'post']],
+            Yii::$app->user->isGuest ? (
+            ['label' => 'Login', 'url' => ['/site/login']]
+            ) : (
+                '<li>'
+                . Html::beginForm(['/site/logout'], 'post')
+                . Html::submitButton(
+                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    ['class' => 'btn btn-link logout']
+                )
+                . Html::endForm()
+                . '</li>'
+            )
+
         ]),
     ]);
     NavBar::end();
