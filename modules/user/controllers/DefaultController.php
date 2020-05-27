@@ -109,7 +109,7 @@ class DefaultController extends Controller
         return $this->goHome();
     }
 
-    public function actionPasswordResetRequest()
+    public function actionRequestPasswordReset()
     {
         $model = new RequestPasswordResetForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
@@ -122,7 +122,7 @@ class DefaultController extends Controller
             }
         }
 
-        return $this->render('passwordResetRequest', [
+        return $this->render('requestPasswordReset', [
             'model' => $model,
         ]);
     }
