@@ -25,6 +25,7 @@ class LoginForm extends Model
             [['username', 'password'], 'required'],
             ['rememberMe', 'boolean'],
             ['password', 'validatePassword'],
+            ['verifyCode', 'captcha', 'captchaAction' => '/user/default/captcha'],
         ];
     }
 

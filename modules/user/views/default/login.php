@@ -25,6 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
+            <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                'captchaAction' => '/user/default/captcha',
+                'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+            ]) ?>
+
             <div style="color:#999;margin:1em 0">
                 If you forgot your password you can <?= Html::a('reset it', ['/request-password-reset']) ?>.
                 <br>
