@@ -4,7 +4,7 @@ namespace app\modules\user\models;
 
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
-use app\modules\user\models\User;
+
 
 /**
  * Password reset form
