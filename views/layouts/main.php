@@ -38,8 +38,8 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => array_filter([
-            ['label' => 'Home', 'url' => ['/main/default/index']],
-            ['label' => 'Contact', 'url' => ['main/contact/index']],
+            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Contact', 'url' => ['site/contact']],
             Yii::$app->user->isGuest ?
                 ['label' => 'Sign Up', 'url' => ['/user/default/signup']] :
                 false,
