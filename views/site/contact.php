@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <?= $form->field($model, 'subject') ?>
 
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+                    <?= $form->field($model, 'body')->textarea(['rows' => 6]); ?>
                     <?= if ($user = Yii::$app->user->identity) {
                             $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                                 'captchaAction' => '/site/captcha',
