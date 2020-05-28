@@ -4,7 +4,7 @@ namespace app\modules\user\controllers;
 
 use app\modules\user\models\EmailConfirmForm;
 use app\modules\user\models\LoginForm;
-use app\modules\user\models\RequestPasswordResetForm;
+use app\modules\user\models\ResendVerificationEmailForm;
 use app\modules\user\models\PasswordResetForm;
 use app\modules\user\models\SignupForm;
 use yii\base\InvalidParamException;
@@ -111,7 +111,7 @@ class DefaultController extends Controller
 
     public function actionRequestPasswordReset()
     {
-        $model = new RequestPasswordResetForm();
+        $model = new ResendVerificationEmailForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
                 Yii::$app->getSession()->setFlash('success', 'Спасибо! На ваш Email было отправлено письмо со ссылкой на восстановление пароля.');
