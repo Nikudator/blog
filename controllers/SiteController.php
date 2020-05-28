@@ -87,7 +87,7 @@ class SiteController extends Controller
             Yii::$app->session->setFlash('contactFormSubmitted');
             return $this->refresh();
         } else {
-            return $this->render('index', [
+            return $this->render('contact', [
                 'model' => $model,
             ]);
         }
