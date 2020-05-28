@@ -38,19 +38,18 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => array_filter([
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'About', 'url' => ['/site/about']],
+            ['label' => 'Контакты', 'url' => ['/site/contact'] , 'options'=> ['class'=>'list-group-item'], 'linkOptions'=>['class'=>'fa fa-address-card']],
+            ['label' => 'Обо мне', 'url' => ['/site/about']],
             Yii::$app->user->isGuest ?
-                ['label' => 'Sign Up', 'url' => ['/user/default/signup']] :
+                ['label' => 'Регистрация', 'url' => ['/user/default/signup']] :
                 false,
             Yii::$app->user->isGuest ? (
-            ['label' => 'Login', 'url' => ['/login']]
+            ['label' => 'Вход', 'url' => ['/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    'Выход (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
