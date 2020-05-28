@@ -30,6 +30,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\modules\user\models\User',
             'enableAutoLogin' => true,
+            'user.passwordResetTokenExpire' => '86400',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
