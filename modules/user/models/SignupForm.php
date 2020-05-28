@@ -53,7 +53,7 @@ class SignupForm extends Model
 
             if ($user->save()) {
                 Yii::$app->mailer->compose('@app/modules/user/mail/emailConfirm', ['user' => $user])
-                    ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name])
+                    ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->name])
                     ->setTo($this->email)
                     ->setSubject('Email confirmation for ' . Yii::$app->name)
                     ->send();
