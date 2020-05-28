@@ -25,7 +25,7 @@ class ContactForm extends Model
         return [
             [['name', 'email', 'subject', 'body'], 'required'],
             ['email', 'email'],
-            ['verifyCode', 'captcha', 'captchaAction' => '/site/captcha'],
+            ['verifyCode', 'captcha', 'captchaAction' => '/site/captcha', 'skipOnEmpty' => false],
         ];
     }
 
