@@ -40,22 +40,22 @@ AppAsset::register($this);
         'items' => array_filter([
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'About', 'url' => ['/site/about']],
             Yii::$app->user->isGuest ?
-                ['label' => 'Sign Up', 'url' => ['/user/default/signup']], :
+                ['label' => 'Sign Up', 'url' => ['/user/default/signup']] :
                 false,
             Yii::$app->user->isGuest ? (
-            ['label' => 'Login', 'url' => ['/login']],
+            ['label' => 'Login', 'url' => ['/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/logout'], 'post')
                 . Html::submitButton(
                     'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout'],
+                    ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
                 . '</li>'
             )
-            ['label' => 'About', 'url' => ['/site/about']],
         ])
     ]);
     NavBar::end();
