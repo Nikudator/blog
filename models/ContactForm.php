@@ -29,7 +29,7 @@ class ContactForm extends Model
             ['email', 'email'],
             // verifyCode needs to be entered correctly
             //['verifyCode', 'captcha'],
-            ['verifyCode', 'captcha', 'captchaAction' => '/site/captcha'],
+            ['verifyCode', 'captcha', 'captchaAction' => 'site/captcha'],
         ];
     }
 
