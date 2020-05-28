@@ -9,7 +9,7 @@ use yii\base\Model;
 /**
  * Password reset form
  */
-class ResetPasswordForm extends Model
+class PasswordResetForm extends Model
 {
     public $password;
 
