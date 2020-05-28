@@ -54,7 +54,7 @@ AppAsset::register($this);
                 )
                 . Html::endForm()
                 . '</li>'
-            )
+            );
             ['label' => 'About', 'url' => ['/site/about']],
         ]),
     ]);
