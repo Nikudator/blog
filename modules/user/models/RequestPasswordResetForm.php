@@ -12,6 +12,7 @@ use yii\base\Model;
 class RequestPasswordResetForm extends Model
 {
     public $email;
+    public $verifyCode;
 
 
     /**
