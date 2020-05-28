@@ -56,7 +56,7 @@ AppAsset::register($this);
                 . '</li>'
             )
             ['label' => 'About', 'url' => ['/site/about']],
-        ]),
+        ])
     ]);
     NavBar::end();
     ?>
