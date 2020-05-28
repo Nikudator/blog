@@ -74,7 +74,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; Nikola-WEB <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right"><a href="nginx.org">Nginx</a> / <a href="apache.org">Apache</a> / <a href="php.net">PHP</a> / <?= Yii::powered() ?></p>
     </div>
 </footer>
 
