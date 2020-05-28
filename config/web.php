@@ -57,6 +57,7 @@ $config = [
             'rules' => [
                 '' => 'site/index',
                 'contact' => 'site/contact',
+                'about' => 'site/about',
                 '<_a:error>' => 'site/default/<_a>',
                 '<_a:(login|logout|signup|email-confirm|request-password-reset|reset-password)>' => 'user/default/<_a>',
                 //'<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_m>/<_c>/<_a>',
