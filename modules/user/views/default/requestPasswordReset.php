@@ -7,6 +7,7 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
 
 $this->title = 'Request password reset';
 $this->params['breadcrumbs'][] = $this->title;
