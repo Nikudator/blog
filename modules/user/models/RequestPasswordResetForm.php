@@ -28,6 +28,7 @@ class RequestPasswordResetForm extends Model
                 'filter' => ['status' => User::STATUS_ACTIVE],
                 'message' => 'There is no user with this email address.'
             ],
+            ['verifyCode', 'captcha', 'captchaAction' => '/user/default/captcha'],
         ];
     }
 
