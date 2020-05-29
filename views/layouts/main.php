@@ -71,9 +71,10 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; Nikola-WEB <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Одноглазый Джо aka One-eyed Joe 2019 - <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?> / <a href="http://php.net">PHP</a> / <a href="http://apache.org">Apache</a> / <a href="http://nginx.org">Nginx</a></p>
+        <p class="pull-right"><?= Yii::powered() ?> / <a href="http://php.net">PHP</a> / <a href="http://apache.org">Apache</a>
+            / <a href="http://nginx.org">Nginx</a></p>
     </div>
 </footer>
 
