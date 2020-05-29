@@ -19,6 +19,11 @@ class Auth extends \yii\db\ActiveRecord
         return 'auth';
     }
 
+    public static function find()
+    {
+        return Pages::find()->all();
+    }
+
     /**
      * {@inheritdoc}
      */
