@@ -64,7 +64,7 @@ $config = [
             ],
 
         ],
-	'authClientCollection' => $auth
+	    'authClientCollection' => $auth
     ],
     'params' => $params,
 ];
