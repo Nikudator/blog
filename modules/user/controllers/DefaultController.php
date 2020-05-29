@@ -116,7 +116,7 @@ class DefaultController extends Controller
     public function actionPasswordResetRequest()
     {
         try {
-            $model = new PasswordResetRequestForm();
+            $model = new RequestPasswordResetForm();
         } catch (InvalidParamException $e) {
             throw new BadRequestHttpException($e->getMessage());
         }
