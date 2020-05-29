@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ])->label('Введите код с картинки') ?>
 
             <div class="form-group">
-                <?= Html::submitButton('Send', ['class' => 'btn btn-primary']) ?>
+                <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary']) ?>
             </div>
 
             <?php ActiveForm::end(); ?>
