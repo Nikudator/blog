@@ -49,7 +49,7 @@ class DefaultController extends Controller
     {
         return [
             'auth' => [
-                'class' => 'yii\authclient\AuthAction',
+                'class' => 'yii\authclient\Auth_Action',
                 'successCallback' => [$this, 'onAuthSuccess'],
             ],
             'captcha' => [
