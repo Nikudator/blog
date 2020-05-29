@@ -13,6 +13,4 @@ $this->params['breadcrumbs'][] = $this->title;
         прочий лытдыбр.
     <p>Возможно это будет кому то интересно.
     <p>
-
-        <code><?= __FILE__ ?></code>
 </div>
