@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $form->field($model, 'rememberMe')->checkbox()->label('Запомнить меня') ?>
 
             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                'captchaAction' => '/user/default/captcha',
+                'captchaAction' => '/user/default/login/captcha',
                 'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
             ])->label('Введите код с картинки') ?>
 
