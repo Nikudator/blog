@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ]) ?>
 
             <div style="color:#999;margin:1em 0">
-                If you forgot your password you can <?= Html::a('reset it', ['/password-reset-request']) ?>.
+                If you forgot your password you can <?= Html::a('reset it', ['/password-request']) ?>.
                 <br>
                 Need new verification email? <?= Html::a('Resend', ['/resend-verification-email']) ?>
             </div>

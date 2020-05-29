@@ -8,7 +8,7 @@ use Yii;
 /**
  * Password reset request form
  */
-class RequestPasswordResetForm extends Model
+class RequestPasswordForm extends Model
 {
     public $email;
     public $verifyCode;
@@ -59,7 +59,7 @@ class RequestPasswordResetForm extends Model
             ->compose('@app/modules/user/mail/passwordReset', ['user' => $user])
             ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name . ' robot'])
             ->setTo($this->email)
-            ->setSubject('Восстановлени пароля от сайта ' . Yii::$app->name)
+            ->setSubject('Восстановление пароля от сайта ' . Yii::$app->name)
             ->send();
     }
 }

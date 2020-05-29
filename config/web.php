@@ -60,7 +60,7 @@ $config = [
                 'contact' => 'site/contact',
                 'about' => 'site/about',
                 '<_a:error>' => 'site/default/<_a>',
-                '<_a:(login|logout|signup|email-confirm|password-reset-request|reset-password|resend-verification-email)>' => 'user/default/<_a>',
+                '<_a:(login|logout|signup|email-confirm|password-request|reset-password|resend-verification-email)>' => 'user/default/<_a>',
             ],
 
         ],

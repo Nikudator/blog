@@ -113,10 +113,10 @@ class DefaultController extends Controller
         return $this->goHome();
     }
 
-    public function actionPasswordResetRequest()
+    public function actionRequestPassword()
     {
         try {
-            $model = new RequestPasswordResetForm();
+            $model = new RequestPasswordForm();
         } catch (InvalidParamException $e) {
             throw new BadRequestHttpException($e->getMessage());
         }
