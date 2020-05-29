@@ -3,7 +3,6 @@
 namespace app\modules\user\models;
 
 use Yii;
-//use app\modules\user\models\User;
 use yii\base\Model;
 
 class ResendVerificationEmailForm extends Model
@@ -26,7 +25,7 @@ class ResendVerificationEmailForm extends Model
             ['email', 'exist',
                 'targetClass' => 'app\modules\user\models\User',
                 'filter' => ['status' => User::STATUS_WAIT],
-                'message' => 'There is no user with this email address, or user has already been verified'
+                'message' => 'Таккой пользователь не найден или его учетная запись уже подтверждена'
             ],
         ];
     }
