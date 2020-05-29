@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                 'captchaAction' => '/user/default/captcha',
                 'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-            ]) ?>
+            ])->label('Введите код с картинки') ?>
 
             <div style="color:#999;margin:1em 0">
                 Если вы забыли пароль, вы можете восстановить
