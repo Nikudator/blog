@@ -49,7 +49,7 @@ class DefaultController extends Controller
     {
         return [
             'auth' => [
-                'class' => 'yii\authclient\Auth_Action',
+                'class' => 'yii\authclient\AuthAction',
                 'successCallback' => [$this, 'onAuthSuccess'],
             ],
             'captcha' => [
@@ -214,6 +214,7 @@ class DefaultController extends Controller
                             'user_id' => $user->id,
                             'source' => $client->getId(),
                             'source_id' => (string)$attributes['id'],
+                            //'status' => User::STATUS_ACTIVE,
                         ]);
                         if ($auth->save()) {
                             $transaction->commit();
