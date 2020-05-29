@@ -146,6 +146,11 @@ class DefaultController extends Controller
         ]);
     }
 
+    /**
+     * Resend verification email
+     *
+     * @return mixed
+     */
     public function actionResendVerificationEmail()
     {
         $model = new ResendVerificationEmailForm();
