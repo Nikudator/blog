@@ -2,7 +2,7 @@
 
 namespace app\modules\user\controllers;
 
-class AuthController extends Controller
+class DefaultController extends Controller
 {
     public function actions()
     {
