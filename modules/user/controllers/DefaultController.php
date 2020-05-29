@@ -109,9 +109,9 @@ class DefaultController extends Controller
         return $this->goHome();
     }
 
-    public function actionRequestPasswordReset()
+    public function actionPasswordResetRequest()
     {
-        $model = new ResendVerificationEmailForm();
+        $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
                 Yii::$app->getSession()->setFlash('success', 'Спасибо! На ваш Email было отправлено письмо со ссылкой на восстановление пароля.');

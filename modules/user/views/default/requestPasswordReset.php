@@ -6,7 +6,7 @@ use yii\captcha\Captcha;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
-/* @var $model app\modules\user\models\ResendVerificationEmailForm */
+/* @var $model app\modules\user\models\PasswordResetRequestForm */
 
 $this->title = 'Request password reset';
 $this->params['breadcrumbs'][] = $this->title;
