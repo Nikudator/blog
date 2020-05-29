@@ -6,6 +6,7 @@ use app\modules\user\models\EmailConfirmForm;
 use app\modules\user\models\LoginForm;
 use app\modules\user\models\ResendVerificationEmailForm;
 use app\modules\user\models\PasswordResetForm;
+use app\modules\user\models\PasswordRequestForm;
 use app\modules\user\models\SignupForm;
 use yii\base\InvalidParamException;
 use yii\filters\AccessControl;
