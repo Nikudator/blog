@@ -38,7 +38,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => array_filter([
-            ['label' => 'Контакты', 'url' => ['/site/contact'], 'options' => ['class' => 'list-group-item'], 'linkOptions' => ['class' => 'fa fa-address-card']],
+            ['label' => 'Контакты', 'url' => ['/site/contact']],
             ['label' => 'Обо мне', 'url' => ['/site/about']],
             Yii::$app->user->isGuest ?
                 ['label' => 'Регистрация', 'url' => ['/user/default/signup']] :
