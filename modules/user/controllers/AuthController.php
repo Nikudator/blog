@@ -2,7 +2,10 @@
 
 namespace app\modules\user\controllers;
 
-class DefaultController extends Controller
+use yii\web\Controller;
+use Yii;
+
+class AuthController extends Controller
 {
     public function actions()
     {
