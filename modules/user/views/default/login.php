@@ -8,7 +8,7 @@ use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
+$this->title = 'Вход';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
@@ -32,13 +32,15 @@ $this->params['breadcrumbs'][] = $this->title;
             ]) ?>
 
             <div style="color:#999;margin:1em 0">
-                If you forgot your password you can <?= Html::a('reset it', ['/password-request']) ?>.
+                Если вы забыли пароль, вы можете восстановить
+                его <?= Html::a('Восстановить пароль', ['/password-request']) ?>.
                 <br>
-                Need new verification email? <?= Html::a('Resend', ['/resend-verification-email']) ?>
+                Если вам не пришло письмо для подтверждения email, вы можете его запросить
+                повторно. <?= Html::a('Подтвердить email', ['/resend-verification-email']) ?>
             </div>
 
             <div class="form-group">
-                <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                <?= Html::submitButton('Войти', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
             </div>
 
             <?php ActiveForm::end(); ?>
