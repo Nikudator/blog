@@ -113,7 +113,7 @@ class DefaultController extends Controller
         return $this->goHome();
     }
 
-    public function actionRequestPassword()
+    public function actionPasswordRequest()
     {
         try {
             $model = new PasswordRequestForm();

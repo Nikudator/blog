@@ -8,7 +8,7 @@ use yii\captcha\Captcha;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\modules\user\models\PasswordResetRequestForm */
 
-$this->title = 'Request password reset';
+$this->title = 'Запрос нового пароля';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-request-password-reset">
