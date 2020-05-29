@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="form-group">
                 <?= yii\authclient\widgets\AuthChoice::widget([
-                    'baseAuthUrl' => ['/user/auth'],
+                    'baseAuthUrl' => ['/user/default/auth'],
                     'popupMode' => false,
                 ]) ?>
             </div>
