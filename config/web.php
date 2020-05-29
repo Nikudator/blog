@@ -2,7 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
-$db = require __DIR__ . '/other.php';
+$auth = require __DIR__ . '/auth.php';
 
 $config = [
     'id' => 'basic',
@@ -64,7 +64,7 @@ $config = [
             ],
 
         ],
-
+	'authClientCollection' => $auth
     ],
     'params' => $params,
 ];
