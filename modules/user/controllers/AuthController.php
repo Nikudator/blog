@@ -5,7 +5,7 @@ namespace app\modules\user\controllers;
 use yii\web\Controller;
 use Yii;
 
-class DefaulController extends Controller
+class AuthController extends Controller
 {
     public function actions()
     {
