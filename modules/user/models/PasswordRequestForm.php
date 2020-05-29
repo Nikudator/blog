@@ -8,7 +8,7 @@ use Yii;
 /**
  * Password reset request form
  */
-class RequestPasswordForm extends Model
+class PasswordRequestForm extends Model
 {
     public $email;
     public $verifyCode;

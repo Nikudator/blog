@@ -116,7 +116,7 @@ class DefaultController extends Controller
     public function actionRequestPassword()
     {
         try {
-            $model = new RequestPasswordForm();
+            $model = new PasswordRequestForm();
         } catch (InvalidParamException $e) {
             throw new BadRequestHttpException($e->getMessage());
         }
@@ -164,10 +164,10 @@ class DefaultController extends Controller
         $model = new ResendVerificationEmailForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
-                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                Yii::$app->session->setFlash('success', 'Проверьте свою почту и следуйте присланным инструкциям.');
                 return $this->goHome();
             }
-            Yii::$app->session->setFlash('error', 'Sorry, we are unable to resend verification email for the provided email address.');
+            Yii::$app->session->setFlash('error', 'Извините, произошла ошибка и мы не можем отправить письмо с инструкциями на указанный email.');
         }
 
         return $this->render('resendVerificationEmail', [
