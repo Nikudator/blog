@@ -130,7 +130,7 @@ class DefaultController extends Controller
             }
         }
 
-        return $this->render('requestPasswordReset', [
+        return $this->render('passwordRequest', [
             'model' => $model,
         ]);
     }
