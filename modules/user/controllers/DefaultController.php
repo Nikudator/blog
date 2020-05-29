@@ -79,7 +79,11 @@ class DefaultController extends Controller
 
     public function actionSignup()
     {
-        $model = new SignupForm();
+        try {
+            $model = new SignupForm();
+        } catch (InvalidParamException $e) {
+            throw new BadRequestHttpException($e->getMessage());
+        }
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 Yii::$app->getSession()->setFlash('success', 'Подтвердите ваш электронный адрес.');
@@ -111,7 +115,11 @@ class DefaultController extends Controller
 
     public function actionPasswordResetRequest()
     {
-        $model = new PasswordResetRequestForm();
+        try {
+            $model = new PasswordResetRequestForm();
+        } catch (InvalidParamException $e) {
+            throw new BadRequestHttpException($e->getMessage());
+        }
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
                 Yii::$app->getSession()->setFlash('success', 'Спасибо! На ваш Email было отправлено письмо со ссылкой на восстановление пароля.');
