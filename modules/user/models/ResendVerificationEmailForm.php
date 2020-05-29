@@ -11,7 +11,7 @@ class ResendVerificationEmailForm extends Model
      * @var string
      */
     public $email;
-
+    public $verifyCode;
 
     /**
      * {@inheritdoc}
