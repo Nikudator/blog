@@ -186,7 +186,7 @@ class DefaultController extends Controller
         $attributes = $client->getUserAttributes();
 
         /* @var $auth Auth */
-        $auth = Auth::find()->where([
+        $auth = Auth::getAll()->where([
             'source' => $client->getId(),
             'source_id' => $attributes['id'],
         ])->one();

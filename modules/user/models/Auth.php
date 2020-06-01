@@ -19,7 +19,7 @@ class Auth extends \yii\db\ActiveRecord
         return 'auth';
     }
 
-    public static function find()
+    public static function getAll()
     {
         return Auth::find()->all();
     }
