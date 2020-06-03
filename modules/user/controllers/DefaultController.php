@@ -186,10 +186,7 @@ class DefaultController extends Controller
         $attributes = $client->getUserAttributes();
 
         /* @var $auth Auth */
-        $auth = Auth::getAll()->where([
-            'source' => $client->getId(),
-            'source_id' => $attributes['id'],
-        ])->one();
+        $auth = Auth::getClientId_AtributesId($client->getId(), $attributes['id']);
 
         if (Yii::$app->user->isGuest) {
             if ($auth) { // авторизация

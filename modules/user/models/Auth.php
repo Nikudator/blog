@@ -19,9 +19,9 @@ class Auth extends \yii\db\ActiveRecord
         return 'auth';
     }
 
-    public static function getAll()
+    public static function getClientId_AtributesId($clientId, $attributesId)
     {
-        return Auth::findAll();
+        return static::findOne(['source' => $clientId, 'source_id' => $attributesId]);
     }
 
     /**
