@@ -90,7 +90,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         ];
     }
 
-    public static function findIdentity($client_id, )
+    public static function findIdentity($client_id)
     {
         return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
     }
