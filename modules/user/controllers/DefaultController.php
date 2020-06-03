@@ -202,8 +202,9 @@ class DefaultController extends Controller
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
                         'username' => $attributes['login'],
-                        'email' => $attributes['email'],
+                        'email' => iif(isset($attributes['email']), $attributes['email'], ''),
                         'password' => $password,
+                        'status' => User::STATUS_ACTIVE,
                     ]);
                     $user->generateAuthKey();
                     $user->generatePasswordResetToken();
@@ -213,7 +214,7 @@ class DefaultController extends Controller
                             'user_id' => $user->id,
                             'source' => $client->getId(),
                             'source_id' => (string)$attributes['id'],
-                            //'status' => User::STATUS_ACTIVE,
+
                         ]);
                         if ($auth->save()) {
                             $transaction->commit();
