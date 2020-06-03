@@ -9,6 +9,7 @@ use app\modules\user\models\PasswordResetForm;
 use app\modules\user\models\PasswordRequestForm;
 use app\modules\user\models\SignupForm;
 use app\modules\user\models\Auth;
+use app\modules\user\models\User;
 use yii\base\InvalidParamException;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
