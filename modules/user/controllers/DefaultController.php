@@ -202,7 +202,7 @@ class DefaultController extends Controller
                     $password = Yii::$app->security->generateRandomString(6);
                     $user = new User([
                         'username' => $attributes['login'],
-                        'email' => iif(isset($attributes['email']), $attributes['email'], ''),
+                        'email' => iif(isset($attributes['email']) ? $attributes['email'] : ''),
                         'password' => $password,
                         'status' => User::STATUS_ACTIVE,
                     ]);
