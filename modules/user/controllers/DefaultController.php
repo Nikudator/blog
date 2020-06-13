@@ -191,7 +191,7 @@ class DefaultController extends Controller
 
         echo "<pre> ";
         var_export($attributes);
-        echo </pre>"; exit;
+        echo "</pre>"; exit;
 
 
 
