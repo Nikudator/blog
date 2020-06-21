@@ -29,10 +29,10 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Html::img('@web/images/logo.png', ['alt'=>Yii::$app->name], ['class'=>'pull-left']).' '.Yii::$app->name,
+        'brandLabel' => Html::img('@web/images/logo.png', ['alt'=>Yii::$app->name],).' '.Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fixed-top pull-left',
         ],
     ]);
     echo Nav::widget([
