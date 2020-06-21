@@ -190,10 +190,20 @@ class DefaultController extends Controller
         $auth = Auth::getClientId_AtributesId($client->getId(), $attributes['id']);
 
         echo "<pre> ";
-        var_export($client->getId());
+        //var_export($client->getId());
+
+
+        switch ($client->getId())
+        {
+            case 'vkontakte':
+                echo 'Вконтакте';
+                break;
+            case 'yandex':
+                echo 'Яндекс';
+                break;
+        }
+
         echo "</pre>"; exit;
-
-
 
         if (Yii::$app->user->isGuest) {
             if ($auth) { // авторизация
