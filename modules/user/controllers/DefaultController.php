@@ -190,18 +190,19 @@ class DefaultController extends Controller
         $auth = Auth::getClientId_AtributesId($client->getId(), $attributes['id']);
 
         echo "<pre> ";
-        //var_export($client->getId());
-
-
-        switch ($client->getId())
+         switch ($client->getId())
         {
             case 'vkontakte':
-                echo 'Вконтакте';
+                echo 'Вконтакте<br>';
                 break;
             case 'yandex':
-                echo 'Яндекс';
+                echo 'Яндекс<br>';
+                break;
+            case 'facebook':
+                echo 'Фэйсбук<br>';
                 break;
         }
+        var_export($attributes);
 
         echo "</pre>"; exit;
 
