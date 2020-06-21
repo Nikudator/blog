@@ -190,7 +190,7 @@ class DefaultController extends Controller
         $auth = Auth::getClientId_AtributesId($client->getId(), $attributes['id']);
 
         echo "<pre> ";
-        var_export($attributes);
+        var_export($client);
         echo "</pre>"; exit;
 
 
