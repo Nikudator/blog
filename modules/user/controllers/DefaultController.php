@@ -198,7 +198,7 @@ class DefaultController extends Controller
                 echo 'Фэйсбук<br>';
                 break;
         }
-        var_export($client->getId());
+        var_export($attributes);
 
         echo "</pre>"; exit;
         /* @var $auth Auth */
