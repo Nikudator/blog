@@ -201,8 +201,11 @@ class DefaultController extends Controller
             case 'facebook':
                 echo 'Фэйсбук<br>';
                 break;
+             case 'odnoklassniki':
+                 echo 'Одноклассники<br>';
+                 break;
         }
-        var_export($attributes);
+        var_export($client->getId());
 
         echo "</pre>"; exit;
 
