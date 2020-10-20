@@ -209,7 +209,8 @@ class DefaultController extends Controller
 
         if (Yii::$app->user->isGuest) {
             if ($auth) { // авторизация
-                $user = $auth->user;
+                //$user = $auth->user;
+                $user = 18;
                 Yii::$app->user->login($user);
             } else { // регистрация
                 if (isset($attributes['email']) && User::find()->where(['email' => $attributes['email']])->exists()) {
