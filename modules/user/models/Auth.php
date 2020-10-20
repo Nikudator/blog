@@ -11,6 +11,7 @@ use Yii;
  */
 class Auth extends \yii\db\ActiveRecord
 {
+    public $user;
     /**
      * {@inheritdoc}
      */
