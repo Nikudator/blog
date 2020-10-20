@@ -217,7 +217,7 @@ class DefaultController extends Controller
                     ]);
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
-                    $email = isset($attributes['email']) ? $attributes['email'] : '';
+                    $email = isset($attributes['email']) ? $attributes['email'] : 'fake@one-eyed.ru';
                     $user = new User([
                         'username' => $username,
                         'email' => $email,
