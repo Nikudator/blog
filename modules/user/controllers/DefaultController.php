@@ -204,7 +204,7 @@ class DefaultController extends Controller
         }
         //var_export($attributes);
 
-        echo "</pre>"; exit;
+        //echo "</pre>"; exit;
 
         if (Yii::$app->user->isGuest) {
             if ($auth) { // авторизация
