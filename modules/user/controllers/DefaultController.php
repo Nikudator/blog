@@ -209,6 +209,12 @@ class DefaultController extends Controller
 
         if (Yii::$app->user->isGuest) {
             if ($auth) { // авторизация
+
+
+                var_export($auth);
+
+                echo "</pre>"; exit;
+
                 $user = $auth->user;
                 Yii::$app->user->login($user);
             } else { // регистрация
