@@ -189,7 +189,7 @@ class DefaultController extends Controller
         /* @var $auth Auth */
         $auth = Auth::getClientId_AtributesId($client->getId(), (isset($attributes['id']))?$attributes['id']:$attributes['uid']);
 
-        echo "<pre> ";
+        //echo "<pre> ";
          switch ($client->getId())
         {
             case 'vkontakte':
@@ -209,8 +209,7 @@ class DefaultController extends Controller
 
         if (Yii::$app->user->isGuest) {
             if ($auth) { // авторизация
-                //$user = $auth->user;
-                $user = 18;
+                $user = $auth->user_id;
                 Yii::$app->user->login($user);
             } else { // регистрация
                 if (isset($attributes['email']) && User::find()->where(['email' => $attributes['email']])->exists()) {
