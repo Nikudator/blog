@@ -193,19 +193,16 @@ class DefaultController extends Controller
          switch ($client->getId())
         {
             case 'vkontakte':
-                echo 'Вконтакте<br>';
+                $username = $attributes['screen_name'];
                 break;
             case 'yandex':
-                echo 'Яндекс<br>';
+                $username = $attributes['login'];
                 break;
-            case 'facebook':
-                echo 'Фэйсбук<br>';
+            case 'odnoklassniki':
+                $username = $attributes['first_name'].' '.$attributes['last_name'];
                 break;
-             case 'odnoklassniki':
-                 echo 'Одноклассники<br>';
-                 break;
         }
-        var_export($attributes);
+        //var_export($attributes);
 
         echo "</pre>"; exit;
 
