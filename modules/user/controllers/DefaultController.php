@@ -205,7 +205,7 @@ class DefaultController extends Controller
                  echo 'Одноклассники<br>';
                  break;
         }
-        var_export($client->getId());
+        var_export($attributes);
 
         echo "</pre>"; exit;
 
