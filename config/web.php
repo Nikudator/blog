@@ -19,6 +19,9 @@ $config = [
         'user' => [
             'class' => 'app\modules\user\Module',
         ],
+        'post' => [
+            'class' => 'app\modules\post\Module',
+        ],
     ],
 
     
@@ -59,6 +62,7 @@ $config = [
                 'about' => 'site/about',
                 '<_a:error>' => 'site/default/<_a>',
                 '<_a:(login|logout|signup|email-confirm|password-request|reset-password|resend-verification-email|auth)>' => 'user/default/<_a>',
+                '<_a:(post)>' => 'post/default/<_a>',
             ],
 
         ],

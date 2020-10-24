@@ -239,5 +239,10 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         $this->email_confirm_token = null;
     }
 
-
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
 }

@@ -1,8 +1,13 @@
 <?php
 
-namespace app\models;
+namespace app\modules\post\models;
 
 use Yii;
+use yii\base\NotSupportedException;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+use yii\helpers\ArrayHelper;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "post".
@@ -48,10 +53,10 @@ class Post extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'author_id' => 'Author ID',
-            'title' => 'Title',
-            'body' => 'Body',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'title' => 'Заголовок',
+            'body' => 'Текст',
+            'created_at' => 'Создано',
+            'updated_at' => 'Обновлено',
         ];
     }
 
@@ -63,5 +68,12 @@ class Post extends \yii\db\ActiveRecord
     public function getAuthor()
     {
         return $this->hasOne(User::className(), ['id' => 'author_id']);
+    }
+
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
     }
 }
