@@ -40,6 +40,7 @@ class Post extends \yii\db\ActiveRecord
         return [
             [['author_id'], 'required'],
             [['author_id', 'created_at', 'updated_at'], 'integer'],
+            [['anons'], 'string'],
             [['body'], 'string'],
             [['title'], 'string', 'max' => 255],
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author_id' => 'id']],
@@ -56,6 +57,7 @@ class Post extends \yii\db\ActiveRecord
             'author_id' => 'Author ID',
             'title' => 'Заголовок',
             'body' => 'Текст',
+            'anons' => 'Анонс',
             'created_at' => 'Создано',
             'updated_at' => 'Обновлено',
         ];

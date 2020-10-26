@@ -16,7 +16,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
+
+    <?= $form->field($model, 'body')->textarea(['rows' => 15]) ?>
 
 
     <div class="form-group">
