@@ -62,9 +62,9 @@ $config = [
                 'about' => 'site/about',
                 '<_a:error>' => 'site/default/<_a>',
                 '<_a:(login|logout|signup|email-confirm|password-request|reset-password|resend-verification-email|auth)>' => 'user/default/<_a>',
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '<controller:\w+>/<id:\d+>' => '<controller>./default/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/default/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/default/<action>',
             ],
 
         ],
