@@ -106,8 +106,11 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             TimestampBehavior::className(),
-            ['class' => BlameableBehavior::className(),
-            'createdByAttribute' => 'author_id',],
+            [
+                'class' => BlameableBehavior::className(),
+                'createdByAttribute' => 'author_id',
+                'updatedByAttribute' => 'author_id',
+            ],
         ];
     }
 }
