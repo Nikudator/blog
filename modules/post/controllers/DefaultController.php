@@ -37,12 +37,16 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new PostSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $data = Post::getAll(10);
+        //$popular = Post::getPopular();
+        //$recent = Post::getRecent();
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+        return $this->render('index',[
+            'post'=>$data['post'],
+            'pagination'=>$data['pagination'],
+            //'popular'=>$popular,
+            //'recent'=>$recent,
+            //'categories'=>$categories
         ]);
     }
 
