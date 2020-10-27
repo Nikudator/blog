@@ -24,7 +24,7 @@ use yii\widgets\LinkPager;
                     <div class="social-share">
                         <span class="social-share-title pull-left text-capitalize">Автор: <?= $post->author; ?> Опубликовано: <?= $post->getDate();?></span>
                         <ul class="text-center pull-right">
-                            <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li><?= //(int) $post->viewed?>
+                            <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>
                         </ul>
                     </div>
                 </div>
