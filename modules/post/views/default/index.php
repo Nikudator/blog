@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-8">
-        <?php foreach($post as $post):?>
+        <?php foreach($posts as $post):?>
             <post class="post">
 
                 <div class="post-content">
