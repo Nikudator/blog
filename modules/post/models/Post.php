@@ -63,6 +63,12 @@ class Post extends \yii\db\ActiveRecord
         ];
     }
 
+    public function savePost()
+    {
+        $this->user_id = Yii::$app->user->id;
+        return $this->save(false);
+    }
+
     /**
      * Gets query for [[Author]].
      *
@@ -71,6 +77,11 @@ class Post extends \yii\db\ActiveRecord
     public function getAuthor()
     {
         return $this->hasOne(User::className(), ['id' => 'author_id']);
+    }
+
+    public function getDate()
+    {
+        return Yii::$app->formatter->asDate($this->created_at);
     }
 
     public function behaviors()
