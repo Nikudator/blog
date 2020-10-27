@@ -42,7 +42,7 @@ class DefaultController extends Controller
         //$recent = Post::getRecent();
 
         return $this->render('index',[
-            'post'=>$data['post'],
+            'posts'=>$data['posts'],
             'pagination'=>$data['pagination'],
             //'popular'=>$popular,
             //'recent'=>$recent,
