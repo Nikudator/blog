@@ -1,13 +1,38 @@
-<div class="post-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
-    <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
-    </p>
-    Пыщь-Пыщь
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+<div class="row">
+    <div class="col-md-8">
+        <?php foreach($post as $post):?>
+            <post class="post">
+
+                <div class="post-content">
+                    <header class="entry-header text-center text-uppercase">
+
+                        <h1 class="entry-title"><a href="<?= Url::toRoute(['post/view', 'id'=>$post->id]);?>"><?= $post->title?></a></h1>
+
+                    </header>
+                    <div class="entry-content">
+                        <p><?= $post->anons?>
+                        </p>
+
+                        <div class="btn-continue-reading text-center text-uppercase">
+                            <a href="<?= Url::toRoute(['post/view', 'id'=>$post->id]);?>" class="more-link">Читать далее</a>
+                        </div>
+                    </div>
+                    <div class="social-share">
+                        <span class="social-share-title pull-left text-capitalize">Автор: <?= $post->author->name; ?> Опубликовано: <?= $post->getDate();?></span>
+                        <ul class="text-center pull-right">
+                            <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li><?= (int) $post->viewed?>
+                        </ul>
+                    </div>
+                </div>
+            </post>
+        <?php endforeach; ?>
+
+        <?php
+        echo LinkPager::widget([
+            'pagination' => $pagination,
+        ]);
+        ?>
+    </div>
 </div>
+</div>
+

@@ -79,6 +79,11 @@ class Post extends \yii\db\ActiveRecord
         return $this->hasOne(User::className(), ['id' => 'author_id']);
     }
 
+    public function getDate()
+    {
+        return Yii::$app->formatter->asDate($this->created_at);
+    }
+
     public function behaviors()
     {
         return [
