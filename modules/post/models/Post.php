@@ -39,11 +39,11 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['author_id'], 'required'],
+            [['author_id']],
             [['author_id', 'created_at', 'updated_at'], 'integer'],
-            [['anons'], 'string'],
-            [['body'], 'string'],
-            [['title'], 'string', 'max' => 255],
+            [['anons'], 'string', 'required'],
+            [['body'], 'string', 'required'],
+            [['title'], 'string', 'max' => 255, 'required'],
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author_id' => 'id']],
         ];
     }
