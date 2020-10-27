@@ -22,6 +22,9 @@ $config = [
         'post' => [
             'class' => 'app\modules\post\Module',
         ],
+        'markdown' => [
+            'class' => 'kartik\markdown\Module',
+        ]
     ],
 
     

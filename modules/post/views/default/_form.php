@@ -18,6 +18,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'body')->textarea(['rows' => 15]) ?>
 
+    <?=  $form->field($model, 'markdown')->widget(
+    MarkdownEditor::classname(),
+    ['height' => 300, 'encodeLabels' => false]
+    );?>
+
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
