@@ -39,11 +39,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
-    <?= MarkdownEditor::widget([
-    'model' => $model,
-    'attribute' => 'body',
-    ]);?>
-
-
+   <?= Markdown::convert($model->body); ?>
 
 </div>
