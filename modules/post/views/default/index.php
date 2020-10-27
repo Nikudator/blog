@@ -10,7 +10,7 @@ use yii\widgets\LinkPager;
                 <div class="post-content">
                     <header class="entry-header text-center text-uppercase">
 
-                        <h1 class="entry-title"><a href="<?= Url::toRoute(['post/view', 'id'=>$post->id]);?>"><?= $post->title?></a></h1>
+                        <h1 class="entry-title"><a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>"><?= $post->title?></a></h1>
 
                     </header>
                     <div class="entry-content">
@@ -18,7 +18,7 @@ use yii\widgets\LinkPager;
                         </p>
 
                         <div class="btn-continue-reading text-center text-uppercase">
-                            <a href="<?= Url::toRoute(['post/view', 'id'=>$post->id]);?>" class="more-link">Читать далее</a>
+                            <a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>" class="more-link">Читать далее</a>
                         </div>
                     </div>
                     <div class="social-share">
