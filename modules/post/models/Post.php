@@ -63,6 +63,12 @@ class Post extends \yii\db\ActiveRecord
         ];
     }
 
+    public function savePost()
+    {
+        $this->user_id = Yii::$app->user->id;
+        return $this->save(false);
+    }
+
     /**
      * Gets query for [[Author]].
      *
