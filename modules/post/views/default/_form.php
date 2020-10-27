@@ -16,9 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
 
-    <?= $form->field($model, 'body')->textarea(['rows' => 15]) ?>
-
-    <?=  $form->field($model, 'markdown')->widget(
+    <?=  $form->field($model, 'body')->widget(
     MarkdownEditor::classname(),
     ['height' => 300, 'encodeLabels' => false]
     );?>
