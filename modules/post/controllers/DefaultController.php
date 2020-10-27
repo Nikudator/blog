@@ -51,32 +51,6 @@ class DefaultController extends Controller
     }
 
     /**
-     * Возвращает опубликованные посты
-     * @return ActiveDataProvider
-     */
-    public static function getAll($pageSize = 10)
-    {
-        // build a DB query to get all articles
-        $query = Post::find();
-
-        // get the total number of articles (but do not fetch the article data yet)
-        $count = $query->count();
-
-        // create a pagination object with the total count
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>$pageSize]);
-
-        // limit the query using the pagination and retrieve the posts
-        $posts = $query->offset($pagination->offset)
-            ->limit($pagination->limit)
-            ->all();
-
-        $data['posts'] = $posts;
-        $data['pagination'] = $pagination;
-
-        return $data;
-    }
-
-    /**
      * Displays a single Post model.
      * @param integer $id
      * @return mixed
