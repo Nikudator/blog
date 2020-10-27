@@ -10,6 +10,7 @@ use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 use app\modules\user\models\User;
 use yii\data\Pagination;
+use yii\behaviors\BlameableBehavior;
 
 /**
  * This is the model class for table "post".
@@ -86,12 +87,6 @@ class Post extends \yii\db\ActiveRecord
         return $data;
     }
 
-    public function savePost()
-    {
-        $this->user_id = Yii::$app->user->id;
-        return $this->save(false);
-    }
-
     /**
      * Gets query for [[Author]].
      *
@@ -111,6 +106,8 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             TimestampBehavior::className(),
+            ['class' => BlameableBehavior::className(),
+            'createdByAttribute' => 'author_id',],
         ];
     }
 }
