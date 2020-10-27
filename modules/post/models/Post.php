@@ -63,6 +63,28 @@ class Post extends \yii\db\ActiveRecord
         ];
     }
 
+    public static function getAll($pageSize)
+    {
+        // build a DB query to get all articles
+        $query = Post::find();
+
+        // get the total number of articles (but do not fetch the article data yet)
+        $count = $query->count();
+
+        // create a pagination object with the total count
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>$pageSize]);
+
+        // limit the query using the pagination and retrieve the articles
+        $posts = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        $data['posts'] = $posts;
+        $data['pagination'] = $pagination;
+
+        return $data;
+    }
+
     public function savePost()
     {
         $this->user_id = Yii::$app->user->id;
