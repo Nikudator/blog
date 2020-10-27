@@ -10,10 +10,10 @@ class m201027_070656_change_key_post extends Migration
     /**
      * {@inheritdoc}
      */
-    public function Up()
+    public function SafeUp()
     {
         $this->dropForeignKey(
-            '{{%fk-post-author_id}}',
+            '{{%fk-post-author_id}}'
         );
 
         $this->addForeignKey(
@@ -25,5 +25,9 @@ class m201027_070656_change_key_post extends Migration
         );
     }
 
+    public function SafeDown()
+    {
+        return true;
+    }
 
 }
