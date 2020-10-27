@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use kartik\markdown\MarkdownEditor;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\post\models\Post */
@@ -37,5 +38,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at',
         ],
     ]) ?>
+
+    <?= MarkdownEditor::widget([
+    'model' => $model,
+    'attribute' => 'body',
+    ]);?>
+
+
 
 </div>
