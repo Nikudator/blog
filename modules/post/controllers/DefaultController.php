@@ -51,15 +51,10 @@ class DefaultController extends Controller
     public function actionIndex()
     {
         $data = Post::getAll(10);
-        //$popular = Post::getPopular();
-        //$recent = Post::getRecent();
 
         return $this->render('index',[
             'posts'=>$data['posts'],
             'pagination'=>$data['pagination'],
-            //'popular'=>$popular,
-            //'recent'=>$recent,
-            //'categories'=>$categories
         ]);
     }
 
