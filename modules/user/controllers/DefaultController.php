@@ -34,9 +34,10 @@ class DefaultController extends Controller
 
     public function beforeAction($action)
     {
-
-        echo ('<pre>'.var_export($action).'</pre>');exit;
-
+        if !$action == 'login' {
+            echo('<pre>' . var_export($action) . '</pre>');
+            exit;
+        }
 
         if (parent::beforeAction($action)) {
             if (!\Yii::$app->user->can($action->id)) {
