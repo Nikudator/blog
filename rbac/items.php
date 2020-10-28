@@ -67,7 +67,6 @@ return [
         'ruleName' => 'userGroup',
         'children' => [
             'create',
-            'user',
         ],
     ],
     'moderator' => [
