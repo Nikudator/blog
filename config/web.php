@@ -87,7 +87,7 @@ $config = [
         ],
         'authManager' => [
             'class' => 'yii\rbac\PhpManager',
-            'defaultRoles' => ['root', 'admin', 'moderator', 'redactor', 'user'],
+            'defaultRoles' => ['guest'],
         ],
         'authClientCollection' => $auth
     ],
