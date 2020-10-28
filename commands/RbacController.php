@@ -15,11 +15,11 @@ class RbacController extends Controller
 
         // Create roles
         $guest = $authManager->createRole('guest');
-        $brand = $authManager->createRole('user');
-        $talent = $authManager->createRole('redactor');
-        $admin = $authManager->createRole('moderator');
+        $user = $authManager->createRole('user');
+        $redactor = $authManager->createRole('redactor');
+        $moderator = $authManager->createRole('moderator');
         $admin = $authManager->createRole('admin');
-        $admin = $authManager->createRole('root');
+        $root = $authManager->createRole('root');
 
         // Create simple, based on action{$NAME} permissions
         $login = $authManager->createPermission('login');
