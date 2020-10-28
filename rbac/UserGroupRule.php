@@ -12,10 +12,7 @@ class UserGroupRule extends Rule
     {
         if (!\Yii::$app->user->isGuest) {
             $group = \Yii::$app->user->identity->group;
-
-            echo ('<pre>'.$group.'</pre>'); exit;
-
-            if ($item->name === 'root') {
+          if ($item->name === 'root') {
                 return $group == 'root';
             } elseif ($item->name === 'admin') {
                 return $group == 'root' || $group == 'admin';
