@@ -45,6 +45,9 @@ return [
     'contact' => [
         'type' => 2,
     ],
+    'captcha' => [
+        'type' => 2,
+    ],
     'guest' => [
         'type' => 1,
         'ruleName' => 'userGroup',
@@ -60,6 +63,7 @@ return [
             'view',
             'about',
             'contact',
+            'captcha',
         ],
     ],
     'user' => [
