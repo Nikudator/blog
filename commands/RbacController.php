@@ -28,7 +28,7 @@ class RbacController extends Controller
         $passwordrequest = $authManager->createPermission('passwordrequest');
         $resendverificationemail = $authManager->createPermission('resendverificationemail');
         $error = $authManager->createPermission('error');
-        $onauthsuccess = $authManager->createPermission('onauthsuccess');
+        $auth = $authManager->createPermission('auth');
         $signup = $authManager->createPermission('signup');
         $index = $authManager->createPermission('index');
         $view = $authManager->createPermission('view');
@@ -43,7 +43,7 @@ class RbacController extends Controller
         $authManager->add($emailconfirm);
         $authManager->add($passwordrequest);
         $authManager->add($resendverificationemail);
-        $authManager->add($onauthsuccess);
+        $authManager->add($auth);
         $authManager->add($error);
         $authManager->add($signup);
         $authManager->add($index);
@@ -80,7 +80,7 @@ class RbacController extends Controller
         $authManager->addChild($guest, $emailconfirm);
         $authManager->addChild($guest, $passwordrequest);
         $authManager->addChild($guest, $resendverificationemail);
-        $authManager->addChild($guest, $onauthsuccess);
+        $authManager->addChild($guest, $auth);
         $authManager->addChild($guest, $error);
         $authManager->addChild($guest, $index);
         $authManager->addChild($guest, $view);
