@@ -60,6 +60,7 @@ return [
         'children' => [
             'logout',
             'passwordrequest',
+            'guest',
         ],
     ],
     'redactor' => [
@@ -67,14 +68,15 @@ return [
         'ruleName' => 'userGroup',
         'children' => [
             'create',
+            'user',
         ],
     ],
     'moderator' => [
         'type' => 1,
         'ruleName' => 'userGroup',
         'children' => [
-            'redactor',
             'update',
+            'redactor',
         ],
     ],
     'admin' => [
@@ -83,6 +85,7 @@ return [
         'children' => [
             'delete',
             'moderator',
+            'root',
         ],
     ],
     'root' => [
