@@ -7,6 +7,7 @@ use app\modules\post\models\Post;
 use app\modules\admin\controllers\PostSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
 use yii\data\Pagination;
 use yii\helpers\ArrayHelper;
