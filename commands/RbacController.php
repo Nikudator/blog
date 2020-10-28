@@ -86,7 +86,7 @@ class RbacController extends Controller
         // user
         $authManager->addChild($user, $guest);
         $authManager->addChild($user, $logout);
-        $authManager->addChild($user, $passwordreset);
+        $authManager->addChild($user, $passwordrequest);
         // redactor
         $authManager->addChild($redactor, $create);
         $authManager->addChild($redactor, $user);
