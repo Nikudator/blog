@@ -24,7 +24,6 @@ class SiteController extends Controller
                     'logout' => ['post'],
                 ],
             ],
-        ];
     }
 
     public function beforeAction($action)
