@@ -58,7 +58,6 @@ return [
         'type' => 1,
         'ruleName' => 'userGroup',
         'children' => [
-            'guest',
             'logout',
             'passwordrequest',
         ],
