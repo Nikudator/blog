@@ -39,6 +39,12 @@ return [
     'create' => [
         'type' => 2,
     ],
+    'about' => [
+        'type' => 2,
+    ],
+    'contact' => [
+        'type' => 2,
+    ],
     'guest' => [
         'type' => 1,
         'ruleName' => 'userGroup',
@@ -52,6 +58,8 @@ return [
             'error',
             'index',
             'view',
+            'about',
+            'contact',
         ],
     ],
     'user' => [
