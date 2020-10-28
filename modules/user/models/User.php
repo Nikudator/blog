@@ -34,6 +34,12 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     const STATUS_ACTIVE = 1;
     const STATUS_WAIT = 2;
 
+    const ROLE_USER = 1;
+    const ROLE_REDACTOR = 3;
+    const ROLE_MODERATOR = 5;
+    const ROLE_ADMIN = 7;
+    const ROLE_ROOT = 9;
+
     public static function tableName()
     {
         return 'user';
@@ -81,12 +87,28 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return ArrayHelper::getValue(self::getStatusesArray(), $this->status);
     }
 
+    public function getGroup()
+    {
+        return ArrayHelper::getValue(self::getRolesArray(), $this->role);
+    }
+
     public static function getStatusesArray()
     {
         return [
             self::STATUS_BLOCKED => 'Заблокирован',
             self::STATUS_ACTIVE => 'Активен',
             self::STATUS_WAIT => 'Ожидает подтверждения',
+        ];
+    }
+
+    public static function getRolesArray()
+    {
+        return [
+            self::ROLE_USER => 'user',
+            self::ROLE_REDACTOR => 'redactor',
+            self::ROLE_MODERATOR => 'moderator',
+            self::ROLE_ADMIN => 'admin',
+            self::ROLE_ROOT => 'root',
         ];
     }
 
