@@ -34,7 +34,7 @@ class DefaultController extends Controller
 
     public function beforeAction($action)
     {
-        if !($action=>id == 'login)' {
+        if (!$action=>id == 'login)' {
             echo('<pre>' . var_export($action) . '</pre>');
             exit;
         }
