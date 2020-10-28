@@ -78,7 +78,7 @@ class RbacController extends Controller
         $authManager->addChild($guest, $emailconfirm);
         $authManager->addChild($guest, $passwordrequest);
         $authManager->addChild($guest, $resendverificationemail);
-        $authManager->addChild($guest, $onauthsuccess);
+        //$authManager->addChild($guest, $onauthsuccess);
         $authManager->addChild($guest, $error);
         $authManager->addChild($guest, $index);
         $authManager->addChild($guest, $view);
