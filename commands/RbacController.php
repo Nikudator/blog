@@ -37,7 +37,7 @@ class RbacController extends Controller
         $create = $authManager->createPermission('create');
         $about = $authManager->createPermission('about');
         $contact = $authManager->createPermission('contact');
-        $contact = $authManager->createPermission('captcha');
+        $captcha = $authManager->createPermission('captcha');
 
 
         // Add permissions in Yii::$app->authManager
