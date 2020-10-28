@@ -25,7 +25,7 @@ class RbacController extends Controller
         $login = $authManager->createPermission('login');
         $logout = $authManager->createPermission('logout');
         $error = $authManager->createPermission('error');
-        $signUp = $authManager->createPermission('sign-up');
+        $signUp = $authManager->createPermission('signup');
         $index = $authManager->createPermission('index');
         $view = $authManager->createPermission('view');
         $update = $authManager->createPermission('update');
