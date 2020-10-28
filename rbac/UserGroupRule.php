@@ -24,6 +24,6 @@ class UserGroupRule extends Rule
                 return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user';
             }
         }
-        return false;
+        return true;
     }
 }
