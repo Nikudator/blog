@@ -93,11 +93,13 @@ return [
         'children' => [
             'delete',
             'moderator',
-            'root',
         ],
     ],
     'root' => [
         'type' => 1,
         'ruleName' => 'userGroup',
+        'children' => [
+            'admin',
+        ],
     ],
 ];
