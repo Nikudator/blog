@@ -11,10 +11,7 @@ class UserGroupRule extends Rule
     public function execute($user, $item, $params)
     {
         if (!\Yii::$app->user->isGuest) {
-
-            echo ('<pre>'.var_export(\Yii::$app->user->identity->group).'</pre>'); exit;
-
-            $group = \Yii::$app->user->identity->group;
+          $group = \Yii::$app->user->identity->group;
           if ($item->name === 'root') {
                 return $group == 'root';
             } elseif ($item->name === 'admin') {
