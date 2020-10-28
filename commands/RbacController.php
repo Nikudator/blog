@@ -35,6 +35,8 @@ class RbacController extends Controller
         $update = $authManager->createPermission('update');
         $delete = $authManager->createPermission('delete');
         $create = $authManager->createPermission('create');
+        $about = $authManager->createPermission('about');
+        $contact = $authManager->createPermission('contact');
 
 
         // Add permissions in Yii::$app->authManager
@@ -51,7 +53,8 @@ class RbacController extends Controller
         $authManager->add($update);
         $authManager->add($delete);
         $authManager->add($create);
-
+        $authManager->add($about);
+        $authManager->add($contact);
 
         // Add rule, based on UserExt->group === $user->group
         $userGroupRule = new UserGroupRule();
@@ -84,6 +87,8 @@ class RbacController extends Controller
         $authManager->addChild($guest, $error);
         $authManager->addChild($guest, $index);
         $authManager->addChild($guest, $view);
+        $authManager->addChild($guest, $about);
+        $authManager->addChild($guest, $contact);
 
         // user
         $authManager->addChild($user, $logout);
