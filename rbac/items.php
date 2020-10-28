@@ -15,7 +15,7 @@ return [
     'resendverificationemail' => [
         'type' => 2,
     ],
-    'onauthsuccess' => [
+    'auth' => [
         'type' => 2,
     ],
     'error' => [
@@ -48,7 +48,7 @@ return [
             'emailconfirm',
             'passwordrequest',
             'resendverificationemail',
-            'onauthsuccess',
+            'auth',
             'error',
             'index',
             'view',
