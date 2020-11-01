@@ -25,9 +25,9 @@ class UserGroupRule extends Rule
             } elseif ($item->name === 'redactor') {
                 return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor';
             } elseif ($item->name === 'user') {
-              return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user';
+                return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user';
             } elseif ($item->name === 'guest') {
-              return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user' || $group == 'guest';
+                return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user' || $group == 'guest';
           }
         }
         else {
