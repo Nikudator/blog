@@ -16,15 +16,15 @@ class UserGroupRule extends Rule
           //echo '<pre>'.$group.'</pre>';exit;
 
           if ($item->name === 'root') {
-                return $group == 'root';
-            } elseif ($item->name === 'admin') {
-                return $group == 'root' || $group == 'admin';
-            } elseif ($item->name === 'moderator') {
-                return $group == 'root' || $group == 'admin' || $group == 'moderator';
-            } elseif ($item->name === 'redactor') {
-                return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor';
-            } elseif ($item->name === 'user') {
                 return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user';
+            } elseif ($item->name === 'admin') {
+                return $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user';
+            } elseif ($item->name === 'moderator') {
+                return $group == 'moderator' || $group == 'redactor' || $group == 'user';
+            } elseif ($item->name === 'redactor') {
+                return $group == 'redactor' || $group == 'user';
+            } elseif ($item->name === 'user') {
+                return $group == 'user';
             }
         }
         else {
