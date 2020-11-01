@@ -26,7 +26,8 @@ class UserGroupRule extends Rule
             }
         }
         else {
-            return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user' || true;
+            $group = 'guest';
+            return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user' || $group == 'guest';
         }
         return false;
     }
