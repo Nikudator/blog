@@ -31,7 +31,7 @@ class UserGroupRule extends Rule
           }
         }
         else {
-            return true;
+            return false;
         }
     }
 }
