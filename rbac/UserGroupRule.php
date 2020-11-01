@@ -30,6 +30,5 @@ class UserGroupRule extends Rule
             $group == 'guest';
             return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user'|| $group == 'guest';
         }
-        return false;
     }
 }
