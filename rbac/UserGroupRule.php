@@ -27,10 +27,8 @@ class UserGroupRule extends Rule
             }
         }
         else {
-            //return false;
-
-
-            return $item->name === 'guest';
+            $group = 'guest';
+            return in_array($group, ['guest', 'user', 'redactor', 'moderator', 'admin', 'root']);;
         }
     }
 }
