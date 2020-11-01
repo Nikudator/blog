@@ -36,6 +36,14 @@ class m201128_225500_add_tag_table extends Migration
 
     public function down()
     {
+        $this->dropForeignKey(
+            '{{%FK_tag_post}}',
+            '{{%FK_post_tag}}'
+        );
+        $this->dropIndex(
+            '{{%FK_tag}}',
+            '{{%FK_post}}'
+        );
         $this->dropTable('{{%tags}}');
         $this->dropTable('{{%tag_post}}');
     }
