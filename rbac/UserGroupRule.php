@@ -29,8 +29,8 @@ class UserGroupRule extends Rule
         else {
             //return false;
 
-           $group = 'guest';
-           return $group == 'guest';
+
+            return $item->name === 'guest';
         }
     }
 }
