@@ -13,7 +13,7 @@ class UserGroupRule extends Rule
     {
         if (!\Yii::$app->user->isGuest) {
           $group = \Yii::$app->user->identity->group;
-          return true;
+          //return true;
           if ($item->name === 'root') {
                 return $group == 'root';
             } elseif ($item->name === 'admin') {
@@ -27,8 +27,9 @@ class UserGroupRule extends Rule
             }
         }
         else {
-            $group = 'guest';
-            return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user' || $group == 'guest';
+            return false;
+           // $group = 'guest';
+            //return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user' || $group == 'guest';
         }
     }
 }
