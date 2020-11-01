@@ -35,6 +35,13 @@ class DefaultController extends Controller
     public function beforeAction($action)
     {
         if (parent::beforeAction($action)) {
+
+            if ($action === 'update') {
+                if (!\Yii::$app->user->can('updateOwnPost', ['postId' => \Yii::$app->user->id])) {
+                    throw new ForbiddenHttpException('Access denied');
+                }
+            }
+
             if (!\Yii::$app->user->can($action->id)) {
                 throw new ForbiddenHttpException('Отказано в доступе. Не достаточно прав.');
             }

@@ -5,6 +5,7 @@ namespace app\commands;
 use Yii;
 use yii\console\Controller;
 use \app\rbac\UserGroupRule;
+use \app\rbac\RedactorPostOwnerRule;
 
 class RbacController extends Controller
 {
@@ -38,6 +39,7 @@ class RbacController extends Controller
         $about = $authManager->createPermission('about');
         $contact = $authManager->createPermission('contact');
         $captcha = $authManager->createPermission('captcha');
+        $updateOwnPost = $authManager->createPermission('updateOwnPost');
 
 
         // Add permissions in Yii::$app->authManager
@@ -60,7 +62,9 @@ class RbacController extends Controller
 
         // Add rule, based on UserExt->group === $user->group
         $userGroupRule = new UserGroupRule();
+        $redactorPostOwnerRule = new RedactorPostOwnerRule();
         $authManager->add($userGroupRule);
+        $authManager->add($redactorPostOwnerRule);
 
         // Add rule "UserGroupRule" in roles
         $guest->ruleName = $userGroupRule->name;
@@ -69,6 +73,7 @@ class RbacController extends Controller
         $moderator->ruleName = $userGroupRule->name;
         $admin->ruleName = $userGroupRule->name;
         $root->ruleName = $userGroupRule->name;
+        $updateOwnPost->ruleName = $redactorPostOwnerRule->name;
 
         // Add roles in Yii::$app->authManager
         $authManager->add($guest);
@@ -77,6 +82,7 @@ class RbacController extends Controller
         $authManager->add($moderator);
         $authManager->add($admin);
         $authManager->add($root);
+        $authManager->add($updateOwnPost);
 
         // Add permission-per-role in Yii::$app->authManager
         // Guest
@@ -100,6 +106,7 @@ class RbacController extends Controller
 
         // redactor
         $authManager->addChild($redactor, $create);
+        $authManager->addChild($redactor, $updateOwnPost);
         $authManager->addChild($redactor, $user);
 
         //moderator
