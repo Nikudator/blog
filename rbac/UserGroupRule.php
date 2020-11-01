@@ -27,7 +27,7 @@ class UserGroupRule extends Rule
             }
         }
         else{
-            return $group == 'root'
+            return $group == 'root';
         }
         return false;
     }
