@@ -35,7 +35,7 @@ class DefaultController extends Controller
     public function beforeAction($action)
     {
         if (parent::beforeAction($action)) {
-echo '<pre>'.var_export(Yii::$app->request->post).'</pre>'; exit;
+echo '<pre>'.var_export(Yii::$app->request).'</pre>'; exit;
             if ($action->id === 'update') {
                 if (!\Yii::$app->user->can('updateOwnPost', ['author_id' => $this->Author])) {
                     throw new ForbiddenHttpException('Access denied');
