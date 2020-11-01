@@ -17,6 +17,9 @@ use yii\helpers\ArrayHelper;
  */
 class DefaultController extends Controller
 {
+
+    private $_author;
+
     /**
      * {@inheritdoc}
      */
@@ -35,8 +38,15 @@ class DefaultController extends Controller
     public function beforeAction($action)
     {
         if (parent::beforeAction($action)) {
-echo '<pre>'.var_export(\Yii::$app->request->get('id')).'</pre>'; exit;
+
+
+//echo '<pre>'.var_export(\Yii::$app->request->get('id')).'</pre>'; exit;
+
+            $_author = $this->getAuthor(\Yii::$app->request->get('id'));
+
             if ($action->id === 'update') {
+
+
                 if (!\Yii::$app->user->can('updateOwnPost', ['author_id' => $this->Author])) {
                     throw new ForbiddenHttpException('Access denied');
                 }
@@ -144,5 +154,14 @@ echo '<pre>'.var_export(\Yii::$app->request->get('id')).'</pre>'; exit;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    private function getAuthor($postId)
+    {
+        if (($model = Post::findOne($postId)) !== null) {
+            return $model->author_id;
+        } else {
+            throw new NotFoundHttpException('Post not found');
+        }
     }
 }
