@@ -80,6 +80,7 @@ return [
         'ruleName' => 'userGroup',
         'children' => [
             'create',
+            'updateOwnPost',
             'user',
         ],
     ],
@@ -105,5 +106,9 @@ return [
         'children' => [
             'admin',
         ],
+    ],
+    'updateOwnPost' => [
+        'type' => 2,
+        'ruleName' => 'isPostOwner',
     ],
 ];
