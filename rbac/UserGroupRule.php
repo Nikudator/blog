@@ -27,10 +27,10 @@ class UserGroupRule extends Rule
             }
         }
         else {
-            return false;
+            //return false;
 
-           //$group = 'guest';
-           //return $group == 'root' || $group == 'admin' || $group == 'moderator' || $group == 'redactor' || $group == 'user' || $group == 'guest';
+           $group = 'guest';
+           return $group == 'guest';
         }
     }
 }
