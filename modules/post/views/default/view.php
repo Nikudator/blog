@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?php
         if (\Yii::$app->user->can('update') {
-            echo (Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']));
+            echo (Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary'],));
         }
 
         ?>
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'confirm' => 'Вы точно хотите удалить статью '.Html::encode($this->title),
             'method' => 'post',
             ],
-            ]));
+            ],));
         }
             ?>
     </p>
