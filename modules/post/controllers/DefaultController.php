@@ -37,20 +37,13 @@ class DefaultController extends Controller
     {
         if (parent::beforeAction($action)) {
 
-            if ($action->id === 'update') {
-                $_author = $this->findModel(\Yii::$app->request->get('id'))->author_id;
-
-                 //echo '<pre>'.var_export($_author).'</pre>'; exit;
-
-                if (!\Yii::$app->user->can('updateOwnPost', ['author_id' => $_author])) {
-                    throw new ForbiddenHttpException('Access denied');
+            if (!\Yii::$app->user->can($action->id)) { //если общего доступа на экшен нет, то проверяем частные случаи доступа
+                if ($action->id === 'update') {
+                    $_author = $this->findModel(\Yii::$app->request->get('id'))->author_id;
+                   if (\Yii::$app->user->can('updateOwnPost', ['author_id' => $_author])) { //проверяем на доступ "ркдактирования владельцем"
+                        return true;
+                    }
                 }
-                else {
-                    return true;
-                }
-            }
-
-            if (!\Yii::$app->user->can($action->id)) {
                 throw new ForbiddenHttpException('Отказано в доступе. Не достаточно прав.');
             }
             return true;
