@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use kartik\markdown\Markdown;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\post\models\Post */
@@ -17,14 +16,23 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?php
+        if (\Yii::$app->user->can('update') {
+            Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']);
+        }
+
+        ?>
+        <?php
+        if (\Yii::$app->user->can('delete') {
+            Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
+            'confirm' => 'Вы точно хотите удалить статью '.Html::encode($this->title),
+            'method' => 'post',
             ],
-        ]) ?>
+            ]);
+        }
+            ?>
     </p>
 
     <?= DetailView::widget([
@@ -38,7 +46,4 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at',
         ],
     ]) ?>
-
-   <?= Markdown::convert($model->body); ?>
-
 </div>

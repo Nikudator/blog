@@ -110,10 +110,10 @@ class RbacController extends Controller
         $authManager->addChild($redactor, $user);
 
         //moderator
-        $authManager->addChild($moderator, $update);
         $authManager->addChild($moderator, $redactor);
 
         // admin
+        $authManager->addChild($moderator, $update);
         $authManager->addChild($admin, $delete);
         $authManager->addChild($admin, $moderator);
 
