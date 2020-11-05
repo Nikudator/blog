@@ -40,7 +40,7 @@ class DefaultController extends Controller
 
 echo '<pre>'.var_export($this->getAuthor(\Yii::$app->request->get('id'))).'</pre>'; exit;
 
-            //$_author = $this->getAuthor(\Yii::$app->request->get('id'));
+            $_author = findOne(\Yii::$app->request->get('id'));
 
             if ($action->id === 'update') {
 
