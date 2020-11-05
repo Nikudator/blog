@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?php
-        if (\Yii::$app->user->can('update')) {
+        if (\Yii::$app->user->can('update') || \Yii::$app->user->can('updateOwnPost', $model->author_id) {
             echo Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary'],);
         }
 
