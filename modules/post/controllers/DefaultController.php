@@ -40,7 +40,7 @@ class DefaultController extends Controller
             if ($action->id === 'update') {
                 $_author = $this->findModel(\Yii::$app->request->get('id'))->author_id;
 
-                 echo '<pre>'.var_export($_author).'</pre>'; exit;
+                 //echo '<pre>'.var_export($_author).'</pre>'; exit;
 
                 if (!\Yii::$app->user->can('updateOwnPost', ['author_id' => $_author])) {
                     throw new ForbiddenHttpException('Access denied');
