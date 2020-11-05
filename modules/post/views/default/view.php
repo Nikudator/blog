@@ -17,13 +17,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?php
-        if (\Yii::$app->user->can('update') {
+        if (\Yii::$app->user->can('update')) {
             echo Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary'],);
         }
 
         ?>
         <?php
-        if (\Yii::$app->user->can('delete') {
+        if (\Yii::$app->user->can('delete')) {
         echo Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
