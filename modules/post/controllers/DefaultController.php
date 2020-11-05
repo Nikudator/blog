@@ -38,9 +38,9 @@ class DefaultController extends Controller
         if (parent::beforeAction($action)) {
 
 
-            //echo '<pre>'.var_export().'</pre>'; exit;
+            echo '<pre>'.var_export($this->findModel(\Yii::$app->request->get('id'))->author_id).'</pre>'; exit;
 
-            $_author = findOne(\Yii::$app->request->get('id'));
+            $_author = $this->findOne(\Yii::$app->request->get('id'));
 
             if ($action->id === 'update') {
                 $_author = $this->findModel(\Yii::$app->request->get('id'))->author_id;
