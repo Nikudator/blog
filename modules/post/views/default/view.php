@@ -18,19 +18,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?php
         if (\Yii::$app->user->can('update') {
-            Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary'])
+            = Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']);
         }
 
         ?>
         <?php
         if (\Yii::$app->user->can('delete') {
-            Html::a('Удалить', ['delete', 'id' => $model->id], [
+            = Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
             'confirm' => 'Вы точно хотите удалить статью '.Html::encode($this->title),
             'method' => 'post',
             ],
-            ])
+            ]);
         }
             ?>
     </p>
