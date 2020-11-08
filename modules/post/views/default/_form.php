@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kartik\markdown\MarkdownEditor;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\post\models\Post */
@@ -17,10 +16,7 @@ use kartik\markdown\MarkdownEditor;
 
     <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
 
-    <?=  $form->field($model, 'body')->widget(
-    MarkdownEditor::classname(),
-    ['height' => 300, 'encodeLabels' => false]
-    );?>
+    <?= $form->field($model, 'body')->textarea(['rows' => 10]) ?>
 
 
     <div class="form-group">
