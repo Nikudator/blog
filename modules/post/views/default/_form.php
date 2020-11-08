@@ -16,7 +16,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
 
-    <?= $form->field($model, 'body')->textarea(['rows' => 10]) ?>
+    <?= $form->field($model, 'body')->widget(\h0rseduck\tuieditor\TuiEditor::class, [
+        'editorOptions' => [
+            'initialEditType' => 'markdown',
+            'previewStyle' => 'vertical',
+            'height' => '500px'
+        ]
+    ]); ?>
 
 
     <div class="form-group">
