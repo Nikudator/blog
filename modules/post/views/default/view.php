@@ -26,11 +26,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php
         if (\Yii::$app->user->can('delete')) {
         echo Html::a('Удалить', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-            'confirm' => 'Вы точно хотите удалить статью '.Html::encode($this->title),
-            'method' => 'post',
-            ],
+                'class' => 'btn btn-danger',
+                'data' => [
+                    'confirm' => 'Вы точно хотите удалить статью '.Html::encode($this->title),
+                    'method' => 'post',
+                ],
             ],);
         }
         ?>
