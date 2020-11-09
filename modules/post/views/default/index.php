@@ -22,7 +22,7 @@ use yii\widgets\LinkPager;
                         </div>
                     </div>
                     <div
-                        <span class="social-share-title pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?= $post->getDate();?>  Обновлено: <?= $post->getUpdate();?></span>
+                        <span class="pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?= $post->getDate();?>  Обновлено: <?= $post->getUpdate();?></span>
                     </div>
                 </div>
             </post>
