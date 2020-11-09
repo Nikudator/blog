@@ -36,17 +36,9 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'author_id',
-            'title',
-            'created_at',
-            'updated_at',
-        ],
-    ]) ?>
-<p></p>
     <?php echo Markdown::convert($model->body); ?>
 
+    <div>
+    <span class="social-share-title pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?= $post->getDate();?>  Обновлено: <?= $post->getUpdate();?></span>
+    </div>
 </div>
