@@ -24,7 +24,10 @@ $config = [
         ],
         'markdown' => [
             'class' => 'kartik\markdown\Module',
-        ]
+        ],
+        'markdown' => [
+            'class' => 'kartik\markdown\Module',
+        ],
     ],
 
     

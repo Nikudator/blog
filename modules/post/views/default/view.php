@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use kartik\markdown\Markdown;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\post\models\Post */
@@ -46,4 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at',
         ],
     ]) ?>
+<p></p>
+    <?= echo Markdown::convert($model->body);?>
+
 </div>
