@@ -39,6 +39,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php echo Markdown::convert($model->body); ?>
 
     <div>
-    <span class="social-share-title pull-left text-capitalize">Автор: <?= $model->author->username; ?> Опубликовано: <?= $model->getDate();?>  Обновлено: <?= $model->getUpdate();?></span>
+    <span class="pull-left text-capitalize">Автор: <?= $model->author->username; ?> Опубликовано: <?= $model->getDate();?>  Обновлено: <?= $model->getUpdate();?></span>
     </div>
 </div>
