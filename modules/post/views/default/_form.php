@@ -17,7 +17,7 @@ use kartik\markdown\MarkdownEditor;
 
     <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
 
-    <?= echo $form->field($model, 'body')->widget(
+    <?= $form->field($model, 'body')->widget(
         MarkdownEditor::classname(),
         ['height' => 500, 'encodeLabels' => false]
     ); ?>
