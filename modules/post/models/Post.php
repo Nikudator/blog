@@ -99,7 +99,11 @@ class Post extends \yii\db\ActiveRecord
 
     public function getDate()
     {
-        return Yii::$app->formatter->asDate($this->created_at);
+        return Yii::$app->formatter->asDatetime($this->created_at, 'short');
+    }
+    public function getUpdate()
+    {
+        return Yii::$app->formatter->asDatetime($this->updated_at, 'short');
     }
 
     public function behaviors()
