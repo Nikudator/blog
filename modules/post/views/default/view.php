@@ -48,6 +48,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 <p></p>
-    <?= echo (Markdown::convert($model->body));?>
+    <?php echo Markdown::convert($model->body); ?>
 
 </div>
