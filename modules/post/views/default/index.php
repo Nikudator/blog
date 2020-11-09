@@ -21,11 +21,8 @@ use yii\widgets\LinkPager;
                             <a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>" class="more-link">Читать далее</a>
                         </div>
                     </div>
-                    <div class="social-share">
-                        <span class="social-share-title pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?= $post->getDate();?></span>
-                        <ul class="text-center pull-right">
-                            <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>
-                        </ul>
+                    <div
+                        <span class="social-share-title pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?= $post->getDate();?>  Обновлено: <?= $post->getUpdate();?></span>
                     </div>
                 </div>
             </post>
