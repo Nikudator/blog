@@ -106,6 +106,8 @@ class Post extends \yii\db\ActiveRecord
         return Yii::$app->formatter->asDatetime($this->updated_at, 'short');
     }
 
+
+
     public function behaviors()
     {
         return [

@@ -43,6 +43,7 @@ $config = [
             'identityClass' => 'app\modules\user\models\User',
             'enableAutoLogin' => true,
             'loginUrl' => ['/login'],
+            'authTimeout' => 60 * 60 * 24 * 7,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
