@@ -17,6 +17,9 @@ class RedactorPostOwnerRule extends Rule
      */
     public function execute($user, $item, $params)
     {
+
+        echo ('<pre>'.var_export($params).'</pre>');exit;
+
         return isset($params['author_id']) ? \Yii::$app->user->id == $params['author_id'] : false;
     }
 }
