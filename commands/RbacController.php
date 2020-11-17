@@ -25,7 +25,7 @@ class RbacController extends Controller
         // Create simple, based on action{$NAME} permissions
         $login = $authManager->createPermission('login');
         $logout = $authManager->createPermission('logout');
-        $email-confirm = $authManager->createPermission('email-confirm');
+        $emailconfirm = $authManager->createPermission('email-confirm');
         $passwordrequest = $authManager->createPermission('passwordrequest');
         $resendverificationemail = $authManager->createPermission('resendverificationemail');
         $error = $authManager->createPermission('error');
@@ -45,7 +45,7 @@ class RbacController extends Controller
         // Add permissions in Yii::$app->authManager
         $authManager->add($login);
         $authManager->add($logout);
-        $authManager->add($email-confirm);
+        $authManager->add($emailconfirm);
         $authManager->add($passwordrequest);
         $authManager->add($resendverificationemail);
         $authManager->add($auth);
@@ -88,7 +88,7 @@ class RbacController extends Controller
         // Guest
         $authManager->addChild($guest, $login);
         $authManager->addChild($guest, $signup);
-        $authManager->addChild($guest, $email-confirm);
+        $authManager->addChild($guest, $emailconfirm);
         $authManager->addChild($guest, $passwordrequest);
         $authManager->addChild($guest, $resendverificationemail);
         $authManager->addChild($guest, $auth);
