@@ -90,7 +90,7 @@ class DefaultController extends Controller
         }
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
-                Yii::$app->getSession()->setFlash('success', 'Подтвердите ваш электронный адрес.');
+                Yii::$app->getSession()->setFlash('success', 'Подтвердите ваш электронный адрес. Проверьте указанный Вами ящик электронной почты. Так же на всякий случай проверьте папку "Спам"');
                 return $this->goHome();
             }
         }
