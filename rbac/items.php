@@ -6,7 +6,7 @@ return [
     'logout' => [
         'type' => 2,
     ],
-    'emailconfirm' => [
+    'email-confirm' => [
         'type' => 2,
     ],
     'passwordrequest' => [
@@ -54,7 +54,7 @@ return [
         'children' => [
             'login',
             'signup',
-            'emailconfirm',
+            'email-confirm',
             'passwordrequest',
             'resendverificationemail',
             'auth',
@@ -88,8 +88,8 @@ return [
         'type' => 1,
         'ruleName' => 'userGroup',
         'children' => [
-            'update',
             'redactor',
+            'update',
         ],
     ],
     'admin' => [
