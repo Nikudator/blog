@@ -25,7 +25,7 @@ class RbacController extends Controller
         // Create simple, based on action{$NAME} permissions
         $login = $authManager->createPermission('login');
         $logout = $authManager->createPermission('logout');
-        $emailconfirm = $authManager->createPermission('email-confirm');
+        $email-confirm = $authManager->createPermission('email-confirm');
         $passwordrequest = $authManager->createPermission('passwordrequest');
         $resendverificationemail = $authManager->createPermission('resendverificationemail');
         $error = $authManager->createPermission('error');
