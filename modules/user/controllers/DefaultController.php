@@ -36,6 +36,9 @@ class DefaultController extends Controller
     {
         if (parent::beforeAction($action)) {
             if (!\Yii::$app->user->can($action->id)) {
+
+                echo '<pre>'.$action->id.'</pre>';exit;
+
                 throw new ForbiddenHttpException('Отказано в доступе. Не достаточно прав.');
             }
             return true;
