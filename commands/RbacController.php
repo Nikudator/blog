@@ -93,6 +93,7 @@ class RbacController extends Controller
         $authManager->addChild($guest, $emailconfirm);
         $authManager->addChild($guest, $passwordrequest);
         $authManager->addChild($guest, $resendverificationemail);
+        $authManager->addChild($guest, $passwordreset);
         $authManager->addChild($guest, $auth);
         $authManager->addChild($guest, $error);
         $authManager->addChild($guest, $index);
@@ -103,7 +104,6 @@ class RbacController extends Controller
 
         // user
         $authManager->addChild($user, $logout);
-        $authManager->addChild($user, $passwordreset);
         $authManager->addChild($user, $guest);
 
         // redactor
