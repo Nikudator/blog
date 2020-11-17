@@ -9,10 +9,13 @@ return [
     'email-confirm' => [
         'type' => 2,
     ],
-    'passwordrequest' => [
+    'password-request' => [
         'type' => 2,
     ],
-    'resendverificationemail' => [
+    'password-reset' => [
+        'type' => 2,
+    ],
+    'resend-verification-email' => [
         'type' => 2,
     ],
     'auth' => [
@@ -55,8 +58,8 @@ return [
             'login',
             'signup',
             'email-confirm',
-            'passwordrequest',
-            'resendverificationemail',
+            'password-request',
+            'resend-verification-email',
             'auth',
             'error',
             'index',
@@ -71,7 +74,7 @@ return [
         'ruleName' => 'userGroup',
         'children' => [
             'logout',
-            'passwordrequest',
+            'password-reset',
             'guest',
         ],
     ],
