@@ -87,6 +87,7 @@ class RbacController extends Controller
         $authManager->add($admin);
         $authManager->add($root);
         $authManager->add($updateOwnPost);
+        $authManager->add($deleteOwnPost);
 
         // Add permission-per-role in Yii::$app->authManager
         // Guest
