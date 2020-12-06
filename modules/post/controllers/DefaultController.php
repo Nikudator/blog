@@ -38,7 +38,7 @@ class DefaultController extends Controller
         if (parent::beforeAction($action)) {
 
 
-            echo '<pre>'.$action->id.'</pre>'; exit;
+            echo '<pre>'.Yii::$app->user->can($action->id).'</pre>'; exit;
 
             if (!\Yii::$app->user->can($action->id)) { //если общего доступа на экшен нет, то проверяем частные случаи доступа
                 if ($action->id === 'update') {
