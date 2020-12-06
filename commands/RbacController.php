@@ -41,6 +41,7 @@ class RbacController extends Controller
         $contact = $authManager->createPermission('contact');
         $captcha = $authManager->createPermission('captcha');
         $updateOwnPost = $authManager->createPermission('updateOwnPost');
+        $deleteOwnPost = $authManager->createPermission('deleteOwnPost');
 
 
         // Add permissions in Yii::$app->authManager
@@ -76,6 +77,7 @@ class RbacController extends Controller
         $admin->ruleName = $userGroupRule->name;
         $root->ruleName = $userGroupRule->name;
         $updateOwnPost->ruleName = $redactorPostOwnerRule->name;
+        $deleteOwnPost->ruleName = $redactorPostOwnerRule->name;
 
         // Add roles in Yii::$app->authManager
         $authManager->add($guest);
@@ -109,6 +111,7 @@ class RbacController extends Controller
         // redactor
         $authManager->addChild($redactor, $create);
         $authManager->addChild($redactor, $updateOwnPost);
+        $authManager->addChild($redactor, $deleteOwnPost);
         $authManager->addChild($redactor, $user);
 
         //moderator
