@@ -110,7 +110,7 @@ class Post extends \yii\db\ActiveRecord
     /**
      * @return ActiveQuery
      */
-    public function getTagPosts()
+    public function getTagPost()
     {
         return $this->hasMany(TagPost::className(), ['post_id' => 'id']);
     }
