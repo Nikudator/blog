@@ -41,7 +41,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             //[['author_id'], 'required'],
-            [['author_id', 'created_at', 'updated_at'], 'integer'],
+            [['author_id', 'created_at', 'updated_at', tags], 'integer'],
             [['anons'], 'string'],
             [['body'], 'string'],
             [['title'], 'string', 'max' => 255],
@@ -106,7 +106,54 @@ class Post extends \yii\db\ActiveRecord
         return Yii::$app->formatter->asDatetime($this->updated_at, 'short');
     }
 
+    /**
+     * @return ActiveQuery
+     */
+    public function getTagPosts()
+    {
+        return $this->hasMany(TagPost::className(), ['post_id' => 'id']);
+    }
 
+    /**
+     * Список тэгов, закреплённых за постом.
+     * @var array
+     */
+    protected $tags = [];
+
+    /**
+     * Устанавлиает тэги поста.
+     * @param $tagsId
+     */
+    public function setTags($tagsId)
+    {
+        $this->tags = (array) $tagsId;
+    }
+
+    /**
+     * Возвращает массив идентификаторов тэгов.
+     */
+    public function getTags()
+    {
+        return ArrayHelper::getColumn(
+            $this->getTagPost()->all(), 'tag_id'
+        );
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function afterSave($insert, $changedAttributes)
+    {
+        TagPost::deleteAll(['post_id' => $this->id]);
+        $values = [];
+        foreach ($this->tags as $id) {
+            $values[] = [$this->id, $id];
+        }
+        self::getDb()->createCommand()
+            ->batchInsert(TagPost::tableName(), ['post_id', 'tag_id'], $values)->execute();
+
+        parent::afterSave($insert, $changedAttributes);
+    }
 
     public function behaviors()
     {
