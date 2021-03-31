@@ -36,10 +36,6 @@ class DefaultController extends Controller
     public function beforeAction($action)
     {
         if (parent::beforeAction($action)) {
-
-
-            //echo '<pre>'.$action->id.'</pre>'; exit;
-
             if (!\Yii::$app->user->can($action->id)) { //если общего доступа на экшен нет, то проверяем частные случаи доступа
                 if ($action->id === 'update') {
                     $_author = $this->findModel(\Yii::$app->request->get('id'))->author_id;
