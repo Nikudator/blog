@@ -60,6 +60,7 @@ return [
             'email-confirm',
             'password-request',
             'resend-verification-email',
+            'password-reset',
             'auth',
             'error',
             'index',
@@ -74,7 +75,6 @@ return [
         'ruleName' => 'userGroup',
         'children' => [
             'logout',
-            'password-reset',
             'guest',
         ],
     ],
@@ -84,6 +84,7 @@ return [
         'children' => [
             'create',
             'updateOwnPost',
+            'deleteOwnPost',
             'user',
         ],
     ],
@@ -111,6 +112,10 @@ return [
         ],
     ],
     'updateOwnPost' => [
+        'type' => 2,
+        'ruleName' => 'isPostOwner',
+    ],
+    'deleteOwnPost' => [
         'type' => 2,
         'ruleName' => 'isPostOwner',
     ],
