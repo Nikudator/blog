@@ -1,7 +1,8 @@
 <?php
 
 namespace app\modules\post\models;
-
+use app\modules\post\models\Tags;
+use app\modules\post\models\TagPost;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
