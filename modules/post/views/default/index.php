@@ -13,6 +13,11 @@ use yii\widgets\LinkPager;
                         <h1 class="entry-title"><a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>"><?= $post->title?></a></h1>
 
                     </header>
+                    <div class="tags">
+                        Тэги: <?php foreach($model->getTagPost()->all() as $post) : ?>
+                            <?= $post->getTag()->one()->title ?>
+                        <?php endforeach; ?>
+                    </div>
                     <div class="entry-content">
                         <p><?= $post->anons?>
                         </p>

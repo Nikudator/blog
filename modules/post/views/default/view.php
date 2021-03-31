@@ -8,7 +8,6 @@ use kartik\markdown\Markdown;
 /* @var $model app\modules\post\models\Post */
 
 $this->title = $model->title;
-//$this->params['breadcrumbs'][] = ['label' => 'Posts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -17,6 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
+
+
         <?php
         if (\Yii::$app->user->can('update') || \Yii::$app->user->can('updateOwnPost', ['author_id' => $model->author_id])) {
             echo Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary'],);
@@ -35,7 +36,11 @@ $this->params['breadcrumbs'][] = $this->title;
         }
         ?>
     </p>
-
+    <div class="tags">
+        Тэги: <?php foreach($model->getTagPost()->all() as $post) : ?>
+            <?= $post->getTag()->one()->title ?>
+        <?php endforeach; ?>
+    </div>
     <?php echo Markdown::convert($model->body); ?>
 
     <div>

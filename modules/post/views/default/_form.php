@@ -15,6 +15,13 @@ use kartik\markdown\MarkdownEditor;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'tags')->listBox(
+        ArrayHelper::map($tags, 'id', 'title'),
+        [
+            'multiple' => true
+        ]
+    ); ?>
+
     <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
 
     <?= $form->field($model, 'body')->widget(
