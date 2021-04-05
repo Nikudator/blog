@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\markdown\MarkdownEditor;
 use yii\helpers\ArrayHelper;
+use mludvik\tagsinput\TagsInputWidget;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\post\models\Post */
@@ -16,12 +17,7 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tags')->listBox(
-        ArrayHelper::map($tags, 'id', 'title'),
-        [
-            'multiple' => true
-        ]
-    ); ?>
+    <?= $form->field($model, 'tags')->widget(TagsInputWidget::className()) ?>
 
     <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
 
