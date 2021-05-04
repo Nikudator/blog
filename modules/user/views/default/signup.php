@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
 
             <div class="form-group">
+                <label class="control-label">Так же вы можете войти с помощью одной из социальных сетей:</label>
                 <?= yii\authclient\widgets\AuthChoice::widget([
                     'baseAuthUrl' => ['/user/default/auth'],
                     'popupMode' => false,
