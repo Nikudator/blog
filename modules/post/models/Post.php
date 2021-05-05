@@ -40,7 +40,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             //[['author_id'], 'required'],
-            [['author_id', 'created_at', 'updated_at', tags], 'integer'],
+            [['author_id', 'created_at', 'updated_at', 'tags'], 'integer'],
             [['anons'], 'string'],
             [['body'], 'string'],
             [['title'], 'string', 'max' => 255],
