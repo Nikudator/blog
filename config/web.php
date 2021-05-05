@@ -95,8 +95,8 @@ $config = [
             'defaultRoles' => ['guest', 'user', 'redactor', 'moderator', 'admin', 'root'],
         ],
         'formatter' => [
-            'dateFormat' => 'dd.MM.yyyy',
-            'datetimeFormat' => 'dd.MM.YYYY H:i:s',
+            'dateFormat' => 'dd.MM.Y',
+            'datetimeFormat' => 'dd.MM.Y H:i:s',
             'timeFormat' => 'H:i:s',
             'decimalSeparator' => '.',
             'thousandSeparator' => ' ',
