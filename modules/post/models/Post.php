@@ -79,8 +79,8 @@ class Post extends \yii\db\ActiveRecord
         $posts = $query->offset($pagination->offset)
             ->limit($pagination->limit)
             ->orderBy([
-                'created_at' => SORT_ASC,
-                'id' => SORT_DESC,
+                'created_at' => SORT_DESC,
+                'id' => SORT_ASC,
             ])
             ->all();
 
