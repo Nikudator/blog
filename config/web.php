@@ -101,7 +101,7 @@ $config = [
             'decimalSeparator' => '.',
             'thousandSeparator' => ' ',
             'currencyCode' => 'RUB',
-            'locale' = 'ru-RU';
+            'locale' = 'ru-RU',
         ],
         'authClientCollection' => $auth,
     ],
