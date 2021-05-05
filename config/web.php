@@ -96,7 +96,7 @@ $config = [
         ],
         'formatter' => [
             'dateFormat' => 'dd.MM.yyyy',
-            'datetimeFormat' => 'd.M.Y H:i:s',
+            'datetimeFormat' => 'dd.MM.YYYY H:i:s',
             'timeFormat' => 'H:i:s',
             'decimalSeparator' => '.',
             'thousandSeparator' => ' ',
