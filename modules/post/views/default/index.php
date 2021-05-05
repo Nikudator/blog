@@ -19,7 +19,7 @@ use yii\widgets\LinkPager;
                         <?php //endforeach; ?>
                     </div>
                     <div class="entry-content">
-                        <p><?php $post->anons?>
+                        <p><?php echo Html::encode($post->anons);?>
                         </p>
 
                         <div class="btn-continue-reading text-center text-uppercase">
