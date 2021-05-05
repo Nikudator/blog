@@ -96,9 +96,12 @@ $config = [
         ],
         'formatter' => [
             'dateFormat' => 'dd.MM.yyyy',
+            'datetimeFormat' => 'd.M.Y H:i:s',
+            'timeFormat' => 'H:i:s',
             'decimalSeparator' => '.',
             'thousandSeparator' => ' ',
-            'currencyCode' => 'RUR',
+            'currencyCode' => 'RUB',
+            'locale' = 'ru-RU';
         ],
         'authClientCollection' => $auth,
     ],
