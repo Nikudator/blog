@@ -78,7 +78,10 @@ class Post extends \yii\db\ActiveRecord
         // limit the query using the pagination and retrieve the articles
         $posts = $query->offset($pagination->offset)
             ->limit($pagination->limit)
-            ->orderBy('created_at')
+            ->orderBy([
+                'created_at' => SORT_ASC,
+                'id' => SORT_DESC,
+            ])
             ->all();
 
         $data['posts'] = $posts;
