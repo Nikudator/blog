@@ -94,13 +94,11 @@ $config = [
             'class' => 'yii\rbac\PhpManager',
             'defaultRoles' => ['guest', 'user', 'redactor', 'moderator', 'admin', 'root'],
         ],
-        'components' => [
-            'formatter' => [
-                'dateFormat' => 'dd.MM.yyyy',
-                'decimalSeparator' => '.',
-                'thousandSeparator' => ' ',
-                'currencyCode' => 'RUR',
-            ],
+        'formatter' => [
+            'dateFormat' => 'dd.MM.yyyy',
+            'decimalSeparator' => '.',
+            'thousandSeparator' => ' ',
+            'currencyCode' => 'RUR',
         ],
         'authClientCollection' => $auth,
     ],
