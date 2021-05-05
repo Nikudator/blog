@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+use yii\helpers\Html;
 ?>
 <div class="row">
     <div class="col-md-8">
