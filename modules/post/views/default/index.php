@@ -14,9 +14,9 @@ use yii\widgets\LinkPager;
 
                     </header>
                     <div class="tags">
-                        Тэги: <?php foreach($model->getTagPost()->all() as $post) : ?>
-                            <?= $post->getTag()->one()->title ?>
-                        <?php endforeach; ?>
+                        Тэги: <?php //foreach($model->getTagPost()->all() as $post) : ?>
+                            <?php //$post->getTag()->one()->title ?>
+                        <?php //endforeach; ?>
                     </div>
                     <div class="entry-content">
                         <p><?= $post->anons?>
