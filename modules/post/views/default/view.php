@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php endforeach; ?>
     </div>
 
-    <div class="blog-anons"><?php $post->anons?></div>
+    <div class="blog-anons"><?php Html::encode($this->anons)?></div>
     <p></p>
     <div class="blog-body"><?php echo Markdown::convert($model->body); ?></div>
 
