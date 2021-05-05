@@ -17,7 +17,7 @@ use mludvik\tagsinput\TagsInputWidget;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tags')->widget(TagsInputWidget::className()) ?>
+    <?= //$form->field($model, 'tags')->widget(TagsInputWidget::className()) ?>
 
     <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
 
