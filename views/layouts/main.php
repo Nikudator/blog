@@ -40,6 +40,7 @@ AppAsset::register($this);
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
+        'encodeLabels' => false,
         'items' => array_filter([
             Yii::$app->user->can('create') ?
                 ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']) . 'fa-lg', 'url' => ['/post/create']] :
