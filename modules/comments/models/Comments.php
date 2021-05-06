@@ -3,6 +3,7 @@
 namespace app\modules\comments\models;
 
 use Yii;
+use app\modules\user\models\User;
 
 /**
  * This is the model class for table "comments".
@@ -48,9 +49,9 @@ class Comments extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'author_id' => 'Author ID',
-            'body' => 'Body',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'body' => 'Текст',
+            'created_at' => 'Создан',
+            'updated_at' => 'Обновлен',
             'parent_comment' => 'Parent Comment',
             'answered_comment' => 'Answered Comment',
         ];
