@@ -204,6 +204,7 @@ class DefaultController extends Controller
             if ($auth) { // авторизация
                 $user = User::findOne(['id' => $auth->user_id]);
                 Yii::$app->user->login($user);
+                Yii::$app->session->setFlash('success', 'Вы успешно вошли с помощью учетной записи '.$client->getId().'.');
             } else { // регистрация
                 if (isset($attributes['email']) && User::find()->where(['email' => $attributes['email']])->exists()) {
                     Yii::$app->getSession()->setFlash('error', [
