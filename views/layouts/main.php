@@ -13,6 +13,7 @@ use app\assets\AppAsset;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
+<?php Yii::$app->user->isGuest ? Yii::$app->session->setFlash('warning', "Наш сайт использует файлы cookes, если вы не согласны с этим, то покиньте сайт.") : false; ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
