@@ -55,7 +55,7 @@ AppAsset::register($this);
                 . Html::beginForm(['/logout'], 'post')
                 . Html::submitButton(
                     Icon::show('door-closed', ['class'=>'fa-lg']).' (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout'], 'options' =>['title' =>'Выйти']
+                    ['class' => 'btn btn-link logout'], 'options' =>['title' =>'Выйти'],
                 )
                 . Html::endForm()
                 . '</li>'
