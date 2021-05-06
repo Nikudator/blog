@@ -22,7 +22,7 @@ class m210506_042903_create_comments_table extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
             'parent_comment' => $this->integer()->notNull(),
-            'parent_comment' => $this->integer()->notNull(),
+            'answered_comment' => $this->integer()->notNull(),
         ]);
 
         // creates index for column `author_id`
