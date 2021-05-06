@@ -43,20 +43,20 @@ AppAsset::register($this);
         'encodeLabels' => false,
         'items' => array_filter([
             Yii::$app->user->can('create') ?
-                ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']) . 'fa-lg', 'url' => ['/post/create']] :
+                ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']), 'url' => ['/post/create']] :
                 false,
             ['label' => 'Контакты', 'url' => ['/site/contact']],
             ['label' => 'Обо мне', 'url' => ['/site/about']],
             Yii::$app->user->isGuest ?
-                ['label' => 'Регистрация', 'url' => ['/user/default/signup']] :
+                ['label' => Icon::show('key', ['class'=>'fa-lg']), 'url' => ['/user/default/signup']] :
                 false,
             Yii::$app->user->isGuest ? (
-            ['label' => 'Вход', 'url' => ['/login']]
+            ['label' => Icon::show('door-open', ['class'=>'fa-lg']), 'url' => ['/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/logout'], 'post')
                 . Html::submitButton(
-                    'Выход (' . Yii::$app->user->identity->username . ')',
+                    Icon::show('door-closed', ['class'=>'fa-lg']).' (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
