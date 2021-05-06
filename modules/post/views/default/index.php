@@ -28,7 +28,7 @@ use yii\helpers\Html;
                         </div>
                     </div>
                     <div
-                        <span class="pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?php $post->getDate(); $post->getDate()===$post->getUpdate() ? 'Обновлено: '.$post->getUpdate() : false ;?></span>
+                        <span class="pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?= $post->getDate();?> <?= $post->getDate()===$post->getUpdate() ? 'Обновлено: '.$post->getUpdate() : false ;?></span>
                     </div>
                 </div>
             </post>
