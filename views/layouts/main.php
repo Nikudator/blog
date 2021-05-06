@@ -9,6 +9,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use kartik\icons\Icon;
+Icon::map($this);
 
 AppAsset::register($this);
 ?>
@@ -40,7 +42,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => array_filter([
             Yii::$app->user->can('create') ?
-                ['label' => 'Создать запись', 'url' => ['/post/create']] :
+                ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']) . 'fa-lg', 'url' => ['/post/create']] :
                 false,
             ['label' => 'Контакты', 'url' => ['/site/contact']],
             ['label' => 'Обо мне', 'url' => ['/site/about']],
