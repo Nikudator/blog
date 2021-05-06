@@ -38,6 +38,9 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => array_filter([
+            Yii::$app->user->can('create') ?
+                ['label' => 'Создать запись', 'url' => ['/post/create']] :
+                false,
             ['label' => 'Контакты', 'url' => ['/site/contact']],
             ['label' => 'Обо мне', 'url' => ['/site/about']],
             Yii::$app->user->isGuest ?
