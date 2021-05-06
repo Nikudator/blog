@@ -47,8 +47,7 @@ AppAsset::register($this);
             ['label' => 'Контакты', 'url' => ['/site/contact']],
             ['label' => 'Обо мне', 'url' => ['/site/about']],
             Yii::$app->user->isGuest ?
-                ['label' => Icon::show('key', ['class'=>'fa-lg']), 'url' => ['/user/default/signup'], 'options' =>['title' =>'Зарегистрироваться']] :
-                false,
+                ['label' => Icon::show('key', ['class'=>'fa-lg']), 'url' => ['/user/default/signup'], 'options' =>['title' =>'Зарегистрироваться']] : false,
             Yii::$app->user->isGuest ? (
             ['label' => Icon::show('door-open', ['class'=>'fa-lg']), 'url' => ['/login'], 'options' =>['title' =>'Войти на сайт']]
             ) : (
