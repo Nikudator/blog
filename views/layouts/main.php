@@ -43,7 +43,7 @@ AppAsset::register($this);
         'encodeLabels' => false,
         'items' => array_filter([
             Yii::$app->user->can('create') ?
-                ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']), 'url' => ['/post/create']] :
+                ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']), 'url' => ['/post/create'], 'title' => ['Создать запись']] :
                 false,
             ['label' => 'Контакты', 'url' => ['/site/contact']],
             ['label' => 'Обо мне', 'url' => ['/site/about']],
