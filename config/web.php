@@ -69,7 +69,6 @@ $config = [
                 '' => 'post',
                 'contact' => 'site/contact',
                 'about' => 'site/about',
-                'site/captcha' => 'site',
                 '<_a:error>' => 'site/default/<_a>',
                 '<_a:(login|logout|signup|email-confirm|password-request|password-reset|resend-verification-email|auth)>' => 'user/default/<_a>',
                 '<controller:\w+>/<id:\d+>' => '<controller>/default/view',
