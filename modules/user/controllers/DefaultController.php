@@ -229,13 +229,16 @@ class DefaultController extends Controller
 
                         ]);
                         if ($auth->save()) {
+                            Yii::$app->session->setFlash('success', 'Вы успешно зарегистрировались с помощью учетной записи '.$client->getId().'.');
                             $transaction->commit();
                             Yii::$app->user->login($user);
+                            Yii::$app->session->setFlash('success', 'Вы успешно вошли с помощью учетной записи '.$client->getId().'.');
                         } else {
                             print_r($auth->getErrors());
+                            Yii::$app->session->setFlash('error', 'Не удалось войти с помощью учетной записи '.$client->getId().'. <br> Ошибка: '.$auth->getErrors());
                         }
                     } else {
-                        print_r($user->getErrors());
+                        Yii::$app->session->setFlash('error', 'Не удалось зарегистрироваться с помощью учетной записи '.$client->getId().'. <br> Ошибка: '.$user->getErrors());
                     }
                 }
             }
@@ -247,6 +250,7 @@ class DefaultController extends Controller
                     'source_id' => $attributes['id'],
                 ]);
                 $auth->save();
+                Yii::$app->session->setFlash('success', 'Вы успешно вошли с помощью учетной записи '.$client->getId().'.');
             }
         }
     }
