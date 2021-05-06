@@ -47,6 +47,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="blog-body"><?php echo Markdown::convert($model->body); ?></div>
 
     <div>
-    <span class="pull-left text-capitalize">Автор: <?= $model->author->username; ?> Опубликовано: <?= $model->getDate();?>  <?= $model->getDate()===$model->getUpdate() ? 'Обновлено: '.$post->getUpdate() : false ;?></span>
+    <span class="pull-left text-capitalize">Автор: <?= $model->author->username; ?> <?= $model->getDate()===$model->getUpdate() ? 'Обновлено: '.$model->getUpdate() : false ;?></span>
     </div>
 </div>
