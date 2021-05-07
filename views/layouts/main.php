@@ -43,19 +43,19 @@ AppAsset::register($this);
         'encodeLabels' => false,
         'items' => array_filter([
             Yii::$app->user->can('create') ?
-                ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']), 'url' => ['/post/create'], 'options' =>['title' =>'Создать запись']] : false,
-            ['label' => Icon::show('envelope', ['class'=>'fa-lg']), 'url' => ['/site/contact'], 'options' =>['title' =>'Контакты']],
-            ['label' => Icon::show('address-card', ['class'=>'fa-lg']), 'url' => ['/site/about'], 'options' =>['title' =>'Обо мне']],
+                ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']), 'url' => ['/post/create'], 'options' => ['title' => 'Создать запись']] : false,
+            ['label' => Icon::show('envelope', ['class'=>'fa-lg']), 'url' => ['/site/contact'], 'options' => ['title' => 'Контакты']],
+            ['label' => Icon::show('address-card', ['class'=>'fa-lg']), 'url' => ['/site/about'], 'options' => ['title' => 'Обо мне']],
             Yii::$app->user->isGuest ?
-                ['label' => Icon::show('key', ['class'=>'fa-lg']), 'url' => ['/user/default/signup'], 'options' =>['title' =>'Зарегистрироваться']] : false,
+                ['label' => Icon::show('key', ['class'=>'fa-lg']), 'url' => ['/user/default/signup'], 'options' => ['title' =>'Зарегистрироваться']] : false,
             Yii::$app->user->isGuest ? (
-            ['label' => Icon::show('door-open', ['class'=>'fa-lg']), 'url' => ['/login'], 'options' =>['title' =>'Войти на сайт']]
+            ['label' => Icon::show('door-open', ['class'=>'fa-lg']), 'url' => ['/login'], 'options' => ['title' => 'Войти на сайт']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/logout'], 'post')
                 . Html::submitButton(
                     Icon::show('door-closed', ['class'=>'fa-lg']).' (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout'], ['title' =>'Выйти']
+                    ['class' => 'btn btn-link logout'], 'options' => ['title' =>'Выйти']
                 )
                 . Html::endForm()
                 . '</li>'
