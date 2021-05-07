@@ -25,6 +25,9 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Yii::$app->name . ' ' . Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 </head>
 <body>
 <?php $this->beginBody() ?>
