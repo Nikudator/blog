@@ -29,6 +29,7 @@ class RbacController extends Controller
         $passwordrequest = $authManager->createPermission('password-request');
         $passwordreset = $authManager->createPermission('password-reset');
         $resendverificationemail = $authManager->createPermission('resend-verification-email');
+        $agreement = $authManager->createPermission('agreement');
         $error = $authManager->createPermission('error');
         $auth = $authManager->createPermission('auth');
         $signup = $authManager->createPermission('signup');
@@ -51,6 +52,7 @@ class RbacController extends Controller
         $authManager->add($passwordrequest);
         $authManager->add($passwordreset);
         $authManager->add($resendverificationemail);
+        $authManager->add($agreement);
         $authManager->add($auth);
         $authManager->add($error);
         $authManager->add($signup);
@@ -96,6 +98,7 @@ class RbacController extends Controller
         $authManager->addChild($guest, $emailconfirm);
         $authManager->addChild($guest, $passwordrequest);
         $authManager->addChild($guest, $resendverificationemail);
+        $authManager->addChild($guest, $agreement);
         $authManager->addChild($guest, $passwordreset);
         $authManager->addChild($guest, $auth);
         $authManager->addChild($guest, $error);
