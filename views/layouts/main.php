@@ -46,6 +46,7 @@ AppAsset::register($this);
                 ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']), 'url' => ['/post/create'], 'options' => ['title' => 'Создать запись']] : false,
             ['label' => Icon::show('envelope', ['class'=>'fa-lg']), 'url' => ['/site/contact'], 'options' => ['title' => 'Контакты']],
             ['label' => Icon::show('info-circle', ['class'=>'fa-lg']), 'url' => ['/site/about'], 'options' => ['title' => 'Обо мне']],
+            ['label' => Icon::show('scroll', ['class'=>'fa-lg']), 'url' => ['/site/agreement'], 'options' => ['title' => 'Правила']],
             Yii::$app->user->isGuest ?
             ['label' => Icon::show('user-plus', ['class'=>'fa-lg']), 'url' => ['/user/default/signup'], 'options' => ['title' =>'Зарегистрироваться']] : false,
             Yii::$app->user->isGuest ?
