@@ -50,3 +50,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <span class="pull-left text-capitalize">Автор: <?= $model->author->username; ?>  Опубликовано: <?= $model->getDate();?> <?= $model->getDate()===$model->getUpdate() ? 'Обновлено: '.$model->getUpdate() : false ;?></span>
     </div>
 </div>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
