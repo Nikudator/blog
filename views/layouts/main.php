@@ -47,7 +47,7 @@ AppAsset::register($this);
             ['label' => Icon::show('envelope', ['class'=>'fa-lg']), 'url' => ['/site/contact'], 'options' => ['title' => 'Контакты']],
             ['label' => Icon::show('info-circle', ['class'=>'fa-lg']), 'url' => ['/site/about'], 'options' => ['title' => 'Обо мне']],
             Yii::$app->user->isGuest ?
-            ['label' => Icon::show('user-plus', ['class'=>'fa-lg']), 'url' => ['/user/default/signup'], 'options' => ['title' =>'Зарегистрироваться']],
+            ['label' => Icon::show('user-plus', ['class'=>'fa-lg']), 'url' => ['/user/default/signup'], 'options' => ['title' =>'Зарегистрироваться']]
             (['label' => Icon::show('door-open', ['class'=>'fa-lg']), 'url' => ['/login'], 'options' => ['title' => 'Войти на сайт']]
             ) : (
 
