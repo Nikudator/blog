@@ -1,4 +1,5 @@
 <?php
+
 return [
     'login' => [
         'type' => 2,
