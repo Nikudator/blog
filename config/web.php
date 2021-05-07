@@ -69,6 +69,7 @@ $config = [
                 '' => 'post',
                 'contact' => 'site/contact',
                 'about' => 'site/about',
+                'agreement' => 'site/agreement',
                 'site/captcha' => 'site/captcha',
                 '<_a:error>' => 'site/default/<_a>',
                 '<_a:(login|logout|signup|email-confirm|password-request|password-reset|resend-verification-email|auth)>' => 'user/default/<_a>',
