@@ -43,7 +43,7 @@ AppAsset::register($this);
         'encodeLabels' => false,
         'items' => array_filter([
             Yii::$app->user->can('create') ?
-                ['label' => Icon::show('feather-alt', ['class'=>'fa-lg']), 'url' => ['/post/create'], 'options' => ['title' => 'Создать запись']] : false,
+                ['label' => Icon::show('pen-fancy', ['class'=>'fa-lg']), 'url' => ['/post/create'], 'options' => ['title' => 'Создать запись']] : false,
             ['label' => Icon::show('envelope', ['class'=>'fa-lg']), 'url' => ['/site/contact'], 'options' => ['title' => 'Контакты']],
             ['label' => Icon::show('info-circle', ['class'=>'fa-lg']), 'url' => ['/site/about'], 'options' => ['title' => 'Обо мне']],
             Yii::$app->user->isGuest ?
