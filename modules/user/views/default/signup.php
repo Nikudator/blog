@@ -22,6 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $form->field($model, 'username')->label('Имя пользователя') ?>
             <?= $form->field($model, 'email') ?>
             <?= $form->field($model, 'password')->passwordInput()->label('Пароль') ?>
+            <?= $form->field($model, 'agreement')->checkbox()->label('Я принимаю <a href="/agreement">Пользовательское соглашением (Правила)</a> сайта') ?>
             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                 'captchaAction' => '/user/default/captcha',
                 'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
@@ -36,6 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'baseAuthUrl' => ['/user/default/auth'],
                     'popupMode' => false,
                 ]) ?>
+                <label class="control-label">Входя или регистрируясь с помощью социальных сетей вы подтверждаете, что согласны с <a href="/agreement">Пользовательским соглашением (Правилами)</a> сайта</label>
             </div>
 
             <?php ActiveForm::end(); ?>

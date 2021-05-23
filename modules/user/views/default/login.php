@@ -49,6 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'baseAuthUrl' => ['/user/default/auth'],
                     'popupMode' => false,
                 ]) ?>
+                <label class="control-label">Входя или регистрируясь с помощью социальных сетей вы подтверждаете, что согласны с <a href="/agreement">Пользовательским соглашением (Правилами)</a> сайта</label>
             </div>
 
             <?php ActiveForm::end(); ?>

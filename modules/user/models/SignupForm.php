@@ -13,6 +13,7 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $agreement = false;
     public $verifyCode;
 
     public function rules()
@@ -31,6 +32,9 @@ class SignupForm extends Model
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
+
+            ['agreement', 'required'],
+            ['agreement', 'boolean'],
 
             ['verifyCode', 'captcha', 'captchaAction' => '/user/default/captcha'],
         ];
