@@ -35,6 +35,8 @@ class SignupForm extends Model
 
             ['agreement', 'required'],
             ['agreement', 'boolean'],
+            ['agreement', 'compare', 'compareValue' => 1, 'message' => 'Для регистрации на сайте вы должны принять Пользовательское соглашение (Правила).'],
+
 
             ['verifyCode', 'captcha', 'captchaAction' => '/user/default/captcha'],
         ];
