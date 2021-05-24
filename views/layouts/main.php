@@ -31,7 +31,7 @@ AppAsset::register($this);
 
 <div class="wrap">
 <?php
-    include '../menu.php';
+    require '../menu.php';
 ?>
     <div class="container">
         <?= Breadcrumbs::widget([
