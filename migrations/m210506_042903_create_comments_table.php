@@ -18,6 +18,7 @@ class m210506_042903_create_comments_table extends Migration
         $this->createTable('{{%comments}}', [
             'id' => $this->primaryKey(),
             'author_id' => $this->integer()->notNull(),
+            'master_id' => $this->integer()->notNull(),
             'body' => $this->text(),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
@@ -30,6 +31,12 @@ class m210506_042903_create_comments_table extends Migration
             '{{%idx-comments-author_id}}',
             '{{%comments}}',
             'author_id'
+        );
+
+        $this->createIndex(
+            '{{%idx-comments-master_id}}',
+            '{{%comments}}',
+            'master_id'
         );
 
         // add foreign key for table `{{%user}}`
@@ -51,6 +58,12 @@ class m210506_042903_create_comments_table extends Migration
         // drops foreign key for table `{{%user}}`
         $this->dropForeignKey(
             '{{%fk-comments-author_id}}',
+            '{{%comments}}'
+        );
+
+        // drops index for column `master_id`
+        $this->dropIndex(
+            '{{%idx-comments-master_id}}',
             '{{%comments}}'
         );
 

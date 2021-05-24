@@ -3,6 +3,7 @@ namespace app\modules\comments\widgets;
 
 use yii\base\Widget;
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use app\modules\comments\models\Comments;
 
 class CommentsWidget extends Widget
