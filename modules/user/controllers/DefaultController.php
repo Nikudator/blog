@@ -179,6 +179,11 @@ class DefaultController extends Controller
         ]);
     }
 
+    public function actionProfile()
+    {
+
+    }
+
     public function onAuthSuccess($client)
     {
         $attributes = $client->getUserAttributes();
