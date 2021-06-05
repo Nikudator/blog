@@ -26,21 +26,14 @@ use yii\helpers\Html;
 
                         <?= empty(trim(Html::encode($post->youtube))) ? false : '<div id="ytplayer'.$post->id.'"></div>' ;?>
 
-                        <script>
-                            var tag = document.createElement('script');
-                            tag.src = "https://www.youtube.com/player_api";
-                            var firstScriptTag = document.getElementsByTagName('script')[0];
-                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                        <?php $players=$players."player[".$post->id."] = new YT.Player('ytplayer".$post->id."', {
+                        height: '360',
+                        width: '640',
+                        videoId: '".Html::encode($post->youtube)."'
+                        });
 
-                            var player;
-                            function onYouTubePlayerAPIReady() {
-                                player = new YT.Player('ytplayer<?=$post->id;?>', {
-                                    height: '360',
-                                    width: '640',
-                                    videoId: '<?php echo Html::encode($post->youtube);?>'
-                                });
-                            }
-                        </script>
+                        ";?>
+
                         <p></p>
                         <div class="btn-continue-reading text-center text-uppercase">
                             <a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>" class="more-link">Читать далее</a>
@@ -62,3 +55,13 @@ use yii\helpers\Html;
 </div>
 </div>
 
+<script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player = [];
+    function onYouTubePlayerAPIReady() {
+        <?= $players; ?>
+    }
+</script>
