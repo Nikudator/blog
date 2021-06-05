@@ -12,7 +12,7 @@ class m210605_173757_add_youtube_column_to_post_table extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn('{{%post}}', 'position', $this->varchar());
+        $this->addColumn('{{%post}}', 'youtube', $this->varchar(11));
     }
 
     /**
@@ -20,6 +20,6 @@ class m210605_173757_add_youtube_column_to_post_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropColumn('{{%post}}', 'position');
+        $this->dropColumn('{{%post}}', 'youtube');
     }
 }
