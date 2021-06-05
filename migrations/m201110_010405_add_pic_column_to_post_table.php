@@ -12,7 +12,7 @@ class m201110_010405_add_pic_column_to_post_table extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn('{{%post}}', 'pic', $this->string(32));
+        $this->addColumn('{{%post}}', 'pic', $this->string(32)->notNull());
     }
 
     /**
