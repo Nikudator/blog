@@ -21,6 +21,8 @@ use mludvik\tagsinput\TagsInputWidget;
 
     <?= $form->field($model, 'anons')->textarea(['rows' => 4]) ?>
 
+    <?= $form->field($model, 'youtube')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'body')->widget(
         MarkdownEditor::classname(),
         ['height' => 500, 'encodeLabels' => false]

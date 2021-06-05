@@ -44,6 +44,7 @@ class Post extends \yii\db\ActiveRecord
             [['anons'], 'string'],
             [['body'], 'string'],
             [['title'], 'string', 'max' => 255],
+            [['youtube'], 'string', 'max' => 11],
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author_id' => 'id']],
         ];
     }
@@ -59,6 +60,7 @@ class Post extends \yii\db\ActiveRecord
             'title' => 'Заголовок',
             'body' => 'Текст',
             'anons' => 'Анонс',
+            'youtube' => 'ID видео Youtube',
             'created_at' => 'Создано',
             'updated_at' => 'Обновлено',
         ];
@@ -107,6 +109,11 @@ class Post extends \yii\db\ActiveRecord
     public function getUpdate()
     {
         return Yii::$app->formatter->asDatetime($this->updated_at);
+    }
+
+    public function getYoutube()
+    {
+        return $this->youtube;
     }
 
     /**
