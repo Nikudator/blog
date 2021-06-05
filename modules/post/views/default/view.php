@@ -8,6 +8,7 @@ use kartik\markdown\Markdown;
 /* @var $model app\modules\post\models\Post */
 
 $this->title = $model->title;
+$this->registerMetaTag(['name' => 'description', 'content' => 'Yii::$app->name." ".$model->title']);
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
