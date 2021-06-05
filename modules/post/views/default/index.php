@@ -37,7 +37,7 @@ use yii\helpers\Html;
                             // YouTube player after the API code downloads.
                             var player;
                             function onYouTubePlayerAPIReady() {
-                                player = new YT.Player('ytplayer<?=$post->id;?> ', {
+                                player = new YT.Player('ytplayer<?=$post->id;?>', {
                                     height: '360',
                                     width: '640',
                                     videoId: '<?php echo Html::encode($post->youtube);?>'
