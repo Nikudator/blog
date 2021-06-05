@@ -19,6 +19,9 @@ return [
     'resend-verification-email' => [
         'type' => 2,
     ],
+    'agreement' => [
+        'type' => 2,
+    ],
     'auth' => [
         'type' => 2,
     ],
@@ -61,6 +64,7 @@ return [
             'email-confirm',
             'password-request',
             'resend-verification-email',
+            'agreement',
             'password-reset',
             'auth',
             'error',
