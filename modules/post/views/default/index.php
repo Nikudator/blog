@@ -22,7 +22,29 @@ use yii\helpers\Html;
                     <div class="entry-content">
                         <p><?php echo Html::encode($post->anons);?>
                         </p>
+                        <p></p>
 
+                        <?= empty(trim(Html::encode($post->youtube))) ? false : '<div id="ytplayer"></div>' ;?>
+
+                        <script>
+                            // Load the IFrame Player API code asynchronously.
+                            var tag = document.createElement('script');
+                            tag.src = "https://www.youtube.com/player_api";
+                            var firstScriptTag = document.getElementsByTagName('script')[0];
+                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                            // Replace the 'ytplayer' element with an <iframe> and
+                            // YouTube player after the API code downloads.
+                            var player;
+                            function onYouTubePlayerAPIReady() {
+                                player = new YT.Player('ytplayer', {
+                                    height: '360',
+                                    width: '640',
+                                    videoId: '<?php echo Html::encode($post->youtube);?>'
+                                });
+                            }
+                        </script>
+                        <p></p>
                         <div class="btn-continue-reading text-center text-uppercase">
                             <a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>" class="more-link">Читать далее</a>
                         </div>
