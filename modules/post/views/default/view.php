@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="blog-anons"><?php echo Html::encode($model->anons);?></div>
     <p></p>
 
-    <?= empty(tri(mHtml::encode($model->youtube))) ? false : '<div id="ytplayer"></div>' ;?>
+    <?= empty(trim(Html::encode($model->youtube))) ? false : '<div id="ytplayer"></div>' ;?>
 
     <script>
         // Load the IFrame Player API code asynchronously.
