@@ -12,7 +12,7 @@ class m210605_173757_add_youtube_column_to_post_table extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn('{{%post}}', 'youtube', $this->varchar(11));
+        $this->addColumn('{{%post}}', 'youtube', $this->string(11));
     }
 
     /**
