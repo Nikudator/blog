@@ -24,7 +24,7 @@ use yii\helpers\Html;
                         </p>
                         <p></p>
 
-                        <?= empty(trim(Html::encode($post->youtube))) ? false : '<div id="ytplayer'$post->id'"></div>' ;?>
+                        <?= empty(trim(Html::encode($post->youtube))) ? false : '<div id="ytplayer'.$post->id.'"></div>' ;?>
 
                         <script>
                             // Load the IFrame Player API code asynchronously.
