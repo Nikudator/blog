@@ -76,7 +76,16 @@ AppAsset::register($this);
         ]) ?>
         <?= Alert::widget() ?>
         <div class="content col-sm-8"><?= $content ?></div>
-        <div class="right-panel col-sm-4"></div>
+        <div class="right-panel col-sm-4">
+            <div class="right-block">
+                <div class="block-title"></div>
+                <div class="block-content"></div>
+            </div>
+            <div class="right-block">
+                <div class="block-title"></div>
+                <div class="block-content"></div>
+            </div>
+        </div>
     </div>
 </div>
 
