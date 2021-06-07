@@ -115,5 +115,5 @@ a.desc:after {
 }
 
 .video {
-    margin: auto;
+    align: absmiddle;
 }
