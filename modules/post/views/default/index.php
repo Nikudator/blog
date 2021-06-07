@@ -39,7 +39,7 @@ use yii\helpers\Html;
                         </div>
                     </div>
                     <div
-                        <span class="pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?= $post->getDate();?> <?= $post->getDate()===$post->getUpdate() ? false : 'Обновлено: '.$post->getUpdate() ;?></span>
+                        <span class="pull-left text-capitalize">Автор: <?= $post->author->username; ?> Опубликовано: <?= $post->getRelTimeDate();?> <?= $post->getDate()===$post->getUpdate() ? false : 'Обновлено: '.$post->getRelTimeUpdate() ;?></span>
                     </div>
                 </div>
             </post>

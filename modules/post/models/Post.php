@@ -111,6 +111,15 @@ class Post extends \yii\db\ActiveRecord
         return Yii::$app->formatter->asDatetime($this->updated_at);
     }
 
+    public function getRelTimeDate()
+    {
+        return Yii::$app->formatter->asRelativeTime($this->created_at);
+    }
+    public function getRelTimeUpdate()
+    {
+        return Yii::$app->formatter->asRelativeTime($this->updated_at);
+    }
+
     public function getYoutube()
     {
         return $this->youtube;
