@@ -23,7 +23,7 @@ use yii\helpers\Html;
                         </p>
                         <p></p>
 
-                        <?= empty(trim(Html::encode($post->youtube))) ? false : '<div id="ytplayer'.$post->id.'"></div>' ;?>
+                        <?= empty(trim(Html::encode($post->youtube))) ? false : '<div class="video" id="ytplayer'.$post->id.'"></div>' ;?>
 
                         <?php $players=$players."player[".$post->id."] = new YT.Player('ytplayer".$post->id."', {
                         height: '360',
