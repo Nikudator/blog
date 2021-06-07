@@ -3,8 +3,7 @@ use yii\helpers\Url;
 use yii\widgets\LinkPager;
 use yii\helpers\Html;
 ?>
-<div class="row">
-    <div class="col-md-8">
+<div class="posts">
         <?php foreach($posts as $post):?>
             <post class="post">
 
@@ -52,7 +51,6 @@ use yii\helpers\Html;
         ]);
         ?>
     </div>
-</div>
 </div>
 
 <script>

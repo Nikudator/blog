@@ -105,6 +105,11 @@ $config = [
             'currencyCode' => 'RUB',
         ],
         'authClientCollection' => $auth,
+        'view' => [
+            'theme' => [
+                'pathMap' => ['@app/views' => '@app/themes/first'],
+            ],
+        ],
     ],
     'params' => $params,
 ];
