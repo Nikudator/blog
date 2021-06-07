@@ -10,7 +10,7 @@ use yii\helpers\Html;
                 <div class="post-content">
                     <header class="entry-header text-center">
 
-                        <h1 class="entry-title"><a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>"><?= $post->title?></a></h1>
+                        <h2 class="entry-title"><a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>"><?= $post->title?></a></h2>
 
                     </header>
                     <div class="tags">
