@@ -8,7 +8,7 @@ use yii\helpers\Html;
             <post class="post">
 
                 <div class="post-content">
-                    <header class="entry-header text-center text-uppercase">
+                    <header class="entry-header text-center">
 
                         <h1 class="entry-title"><a href="<?= Url::toRoute(['/post/view', 'id'=>$post->id]);?>"><?= $post->title?></a></h1>
 
