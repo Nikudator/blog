@@ -9,9 +9,6 @@ use yii\helpers\Html;
     <?= $this->render('_post', [
         'post' => $post,
     ]) ?>
-
-
-
                         <?php $players=$players."player[".$post->id."] = new YT.Player('ytplayer".$post->id."', {
                         height: '360',
                         width: '640',
