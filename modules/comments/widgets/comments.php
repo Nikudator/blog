@@ -1,5 +1,5 @@
 <?php
-namespace app\modules\comments\widgets\comments;
+namespace app\modules\comments\widgets;
 
 use yii\base\Widget;
 use yii\helpers\Html;
