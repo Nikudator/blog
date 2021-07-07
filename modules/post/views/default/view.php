@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use kartik\markdown\Markdown;
+use app\modules\comments\widgets\Comments;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\post\models\Post */
@@ -72,6 +73,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <div>
     <span class="pull-left text-capitalize">Автор: <?= $model->author->username; ?>  Опубликовано: <?= $model->getRelTimeDate();?> <?= $model->getDate()===$model->getUpdate() ?  false : 'Обновлено: '.$model->getRelTimeUpdate();?></span>
     </div>
+</div>
+<div class="comments">
+    <?= Comments::widget(['master_id' => 5]);?>
 </div>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>

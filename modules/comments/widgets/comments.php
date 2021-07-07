@@ -14,13 +14,11 @@ class CommentsWidget extends Widget
     {
         parent::init();
 
-
-
-
     }
 
     public function run()
     {
-        return Html::encode($this->message);
+
+        return $this->render('_comment');
     }
 }
