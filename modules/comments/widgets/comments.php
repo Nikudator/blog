@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\modules\comments\models\Comments;
 
-class CommentsWidget extends Widget
+class Comments extends Widget
 {
     public $master_id;
 
