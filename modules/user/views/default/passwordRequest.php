@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>Введите ваш адрес электронной почты, с которым вы регистрировались на нашем сайте. Мы отправим на него ссылку для восстановления пароля.</p>
 
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-lg-7">
             <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
 
             <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>

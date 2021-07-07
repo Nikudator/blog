@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>Для регистрации заполните поля:</p>
 
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-lg-7">
             <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
             <?= $form->field($model, 'username')->label('Имя пользователя') ?>
             <?= $form->field($model, 'email') ?>
