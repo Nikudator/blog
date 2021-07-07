@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use kartik\markdown\Markdown;
-use app\modules\comments\widgets\CommentsWiget;
+use app\modules\comments\widgets\CommentsWidget;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\post\models\Post */
