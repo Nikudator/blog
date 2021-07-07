@@ -75,7 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
 <div class="comments">
-    <?= Comments::widget(['master_id' => 5]);?>
+    <?= CommentsWiget::widget(['master_id' => 5]);?>
 </div>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
