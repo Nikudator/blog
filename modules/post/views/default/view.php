@@ -69,11 +69,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="blog-body"><?php echo Markdown::convert($model->body); ?></div>
 
     <div>
-    <span class="pull-left text-capitalize">Автор: <?= $model->author->username; ?>  Опубликовано: <?= $model->getRelTimeDate();?> <?= $model->getDate()===$model->getUpdate() ?  false : 'Обновлено: '.$model->getRelTimeUpdate();?></span>
+        <span class="pull-left text-capitalize">Автор: <?= $model->author->username; ?>  Опубликовано: <?= $model->getRelTimeDate(); ?> <?= $model->getDate() === $model->getUpdate() ? false : 'Обновлено: ' . $model->getRelTimeUpdate(); ?></span>
     </div>
 </div>
 
-<?php CommentsWidget::widget(['master_id' => $model->id]);?>
+<?php CommentsWidget::widget([
+    'master_id' => $model->id,
+]); ?>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
