@@ -74,7 +74,7 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 
 <?php CommentsWidget::widget([
-    'master_id' => $model->id,
+    'master_id' => 5,
 ]); ?>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
