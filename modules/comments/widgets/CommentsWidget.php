@@ -20,6 +20,6 @@ class CommentsWidget extends Widget
     public function run()
     {
 
-        return $this->render('_comment');
+        return $this->render('_comment', ['master_id' => $master_id]);
     }
 }
