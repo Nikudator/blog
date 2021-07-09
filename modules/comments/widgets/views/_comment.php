@@ -3,5 +3,5 @@
 ?>
 
 <div class="comments">
-    This comment of post id= <? e "000000" ?>
+    This comment of post id= <?php e "000000" ?>
 </div>
