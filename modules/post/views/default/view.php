@@ -73,7 +73,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
 
-<? CommentsWidget::widget([
+<?php CommentsWidget::widget([
     'master_id' => $model->id,
 ]); ?>
 
