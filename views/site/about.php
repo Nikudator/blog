@@ -5,6 +5,7 @@
 use yii\helpers\Html;
 
 $this->title = 'Обо мне';
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->name . ': ' . Html::encode($this->title)]);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">

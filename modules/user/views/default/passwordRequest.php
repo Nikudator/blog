@@ -9,6 +9,7 @@ use yii\captcha\Captcha;
 /* @var $model app\modules\user\models\PasswordRequestForm */
 
 $this->title = 'Запрос нового пароля';
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->name . ': ' . Html::encode($this->title)]);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-request-password-reset">

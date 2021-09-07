@@ -9,6 +9,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Смена пароля';
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->name . ': ' . Html::encode($this->title)]);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-reset-password">
