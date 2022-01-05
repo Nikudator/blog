@@ -39,13 +39,13 @@ class DefaultController extends Controller
             if (!\Yii::$app->user->can($action->id)) { //если общего доступа на экшен нет, то проверяем частные случаи доступа
                 if ($action->id === 'update') {
                     $_author = $this->findModel(\Yii::$app->request->get('id'))->author_id;
-                   if (\Yii::$app->user->can('updateOwnPost', ['author_id' => $_author])) { //проверяем на доступ "ркдактирования владельцем"
+                   if (\Yii::$app->user->can('updateOwnPost', ['author_id' => $_author])) { //проверяем на доступ "редактирования владельцем"
                         return true;
                     }
                 }
                 if ($action->id === 'delete') {
                     $_author = $this->findModel(\Yii::$app->request->get('id'))->author_id;
-                    if (\Yii::$app->user->can('deleteOwnPost', ['author_id' => $_author])) { //проверяем на доступ "ркдактирования владельцем"
+                    if (\Yii::$app->user->can('deleteOwnPost', ['author_id' => $_author])) { //проверяем на доступ "редактирования владельцем"
                         return true;
                     }
                 }
