@@ -16,7 +16,6 @@ use yii\helpers\Html;
                         videoId: '".Html::encode($post->youtube)."'
                         });
                         ";?>
-        <?php //echo empty(trim(Html::encode($post->youtube))) ? false : Html::encode($post->youtube); ?>
         <?php endforeach; ?>
 
         <?php
@@ -34,6 +33,6 @@ use yii\helpers\Html;
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     var player = [];
     function onYouTubePlayerAPIReady() {
-        <?= $players; ?>
+        <?php echo $players; ?>
     }
 </script>
