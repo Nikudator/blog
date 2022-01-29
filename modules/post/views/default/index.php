@@ -15,7 +15,7 @@ use yii\helpers\Html;
                         videoId: '".Html::encode($post->youtube)."'
                         });
 
-                        ");?>
+                        ";?>
 
         <?php endforeach; ?>
 
