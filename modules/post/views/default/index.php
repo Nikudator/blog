@@ -4,7 +4,7 @@ use yii\widgets\LinkPager;
 use yii\helpers\Html;
 ?>
 <div class="posts">
-    <?php $players = '';?>
+    <?php $players = "";?>
     <?php foreach($posts as $post):?>
 
     <?= $this->render('_post', [
@@ -16,7 +16,7 @@ use yii\helpers\Html;
                         videoId: '".Html::encode($post->youtube)."'
                         });
                         ";?>
-        <?php echo trim(Html::encode($post->youtube)); ?>
+        <?php echo empty(trim(Html::encode($post->youtube))); ?>
         <?php endforeach; ?>
 
         <?php
