@@ -63,7 +63,7 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        $data = Post::getAll(20);
+        $data = Post::getAll(10);
 
         return $this->render('index',[
             'posts'=>$data['posts'],
