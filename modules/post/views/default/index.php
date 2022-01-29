@@ -17,7 +17,7 @@ use yii\helpers\Html;
                         });
 
                         ";?>
-
+        <?php echo $post->youtube; ?>
         <?php endforeach; ?>
 
         <?php
