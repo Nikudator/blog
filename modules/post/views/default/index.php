@@ -15,7 +15,7 @@ use yii\helpers\Html;
                         width: '640',
                         videoId: '".Html::encode($post->youtube)."'
                         });
-                        "};?>
+                        ";}?>
         <?php endforeach; ?>
         <?php
         echo LinkPager::widget([
