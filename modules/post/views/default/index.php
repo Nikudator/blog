@@ -9,13 +9,13 @@ use yii\helpers\Html;
     <?= $this->render('_post', [
         'post' => $post,
     ]) ?>
-                        <?php $players=$players."player[".$post->id."] = new YT.Player('ytplayer".$post->id."', {
+                        <?php $players=$players.empty(trim(Html::encode($post->youtube))) ? "" : "player[".$post->id."] = new YT.Player('ytplayer".$post->id."', {
                         height: '360',
                         width: '640',
                         videoId: '".Html::encode($post->youtube)."'
                         });
 
-                        ";?>
+                        ");?>
 
         <?php endforeach; ?>
 
