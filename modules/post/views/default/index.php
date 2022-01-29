@@ -4,6 +4,7 @@ use yii\widgets\LinkPager;
 use yii\helpers\Html;
 ?>
 <div class="posts">
+    <?php $players = '';?>
     <?php foreach($posts as $post):?>
 
     <?= $this->render('_post', [
