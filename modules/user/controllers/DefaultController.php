@@ -259,6 +259,8 @@ class DefaultController extends Controller
                 Yii::$app->session->setFlash('success', 'Вы успешно вошли с помощью учетной записи '.$client->getId().'.');
             }
         }
+
+        return $this->goBack();
     }
 
 }
