@@ -13,8 +13,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>Приветствую на моем сайте. Я блогер. Здесь я буду рассказывать и показывать всякое, что взбредет в мою голову.
     <p>Возможно это будет кому то интересно.
     <p>
-    <p>Мой Youtube-канал - https://www.youtube.com/channel/UC6k9vQrMLnZPslhC7kUFhqg
-    <p>Моя группа Вконтакте - https://vk.com/oneeyedjoe
-    <p>Задонатить на Boosty - https://boosty.to/oej
-    <p>Задонатить на - https://www.donationalerts.com/r/one_eyed_joe
+    <p>Мой <a href="https://www.youtube.com/channel/UC6k9vQrMLnZPslhC7kUFhqg">Youtube-канал.</a>
+    <p>Моя <a href="https://vk.com/oneeyedjoe">группа Вконтакте.</a>
+    <p>Задонатить <a href="https://boosty.to/oej">на Boosty.</a>
+    <p>Задонатить <a href="https://www.donationalerts.com/r/one_eyed_joe">на DonationAlerts.</a>
 </div>
