@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>Возможно это будет кому то интересно.
     <p>
     <p>Мой <a href="https://www.youtube.com/channel/UC6k9vQrMLnZPslhC7kUFhqg">Youtube-канал.</a>
-    <p>Моя <a href="https://vk.com/oneeyedjoe">группа Вконтакте.</a>
+    <p>Мой <a href="https://rutube.ru/channel/24237743/">Rutube-канал.</a>
     <p>Задонатить <a href="https://boosty.to/oej">на Boosty.</a>
     <p>Задонатить <a href="https://www.donationalerts.com/r/one_eyed_joe">на DonationAlerts.</a>
 </div>
