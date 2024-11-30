@@ -5,7 +5,7 @@ use yii\helpers\Html;
 ?>
 <div class="posts">
     <?php foreach($posts as $post):?>
-
+    <?php $players=''; ?>
     <?= $this->render('_post', [
         'post' => $post,
     ]) ?>

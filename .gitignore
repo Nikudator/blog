@@ -34,3 +34,6 @@ tests/_support/_generated
 
 /config/db.php
 /config/auth.php
+
+#assets
+/web/assets/*
